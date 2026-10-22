@@ -1,0 +1,58 @@
+cff-version: 1.2.0
+message: "If you use this software or the associated Zenodo dataset, please cite the paper below."
+title: "Content-Level Information-Type and Sensitivity Classification for Ungoverned Multimodal Data Lakes"
+type: software
+authors:
+  - family-names: Sharma
+    given-names: Ratnesh Kumar
+    affiliation: "University of Technology Sydney"
+    orcid: "https://orcid.org/0000-0002-9139-2120"
+  - family-names: Bharathy
+    given-names: Gnana
+    affiliation: "University of Technology Sydney"
+    orcid: "https://orcid.org/0000-0001-8384-9509"
+  - family-names: Karimi
+    given-names: Faezeh
+    affiliation: "University of Technology Sydney"
+    orcid: "https://orcid.org/0000-0002-3343-4054"
+  - family-names: Sharma
+    given-names: Akhilesh Kumar
+    affiliation: "Manipal University Jaipur"
+    orcid: "https://orcid.org/0000-0002-7308-7800"
+  - family-names: Prasad
+    given-names: Mukesh
+    affiliation: "University of Technology Sydney"
+    orcid: "https://orcid.org/0000-0002-7745-9667"
+license: MIT
+repository-code: "https://github.com/sharmaratnesh/datalake-governance-pipeline"
+identifiers:
+  - type: doi
+    value: "10.5281/zenodo.23551434"
+    description: "Zenodo deposit, all versions (concept DOI): corpus, golden labels, aggregate human scores, predictions"
+  - type: doi
+    value: "10.5281/zenodo.23551435"
+    description: "Zenodo version 1: the synthetic data_swamp corpus"
+  - type: doi
+    value: "10.5281/zenodo.23580222"
+    description: "Zenodo version 2: golden labels, aggregate human scores, predictions, databases, ontologies"
+preferred-citation:
+  type: article
+  title: "Content-Level Information-Type and Sensitivity Classification for Ungoverned Multimodal Data Lakes"
+  authors:
+    - family-names: Sharma
+      given-names: Ratnesh Kumar
+      orcid: "https://orcid.org/0000-0002-9139-2120"
+    - family-names: Bharathy
+      given-names: Gnana
+      orcid: "https://orcid.org/0000-0001-8384-9509"
+    - family-names: Karimi
+      given-names: Faezeh
+      orcid: "https://orcid.org/0000-0002-3343-4054"
+    - family-names: Sharma
+      given-names: Akhilesh Kumar
+      orcid: "https://orcid.org/0000-0002-7308-7800"
+    - family-names: Prasad
+      given-names: Mukesh
+      orcid: "https://orcid.org/0000-0002-7745-9667"
+  year: 2026
+  journal: "FILL IN once venue is chosen"

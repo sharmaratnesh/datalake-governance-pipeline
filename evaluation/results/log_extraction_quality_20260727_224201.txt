@@ -1,0 +1,90 @@
+2026-07-27 22:42:05,863 [INFO] ======================================================================
+2026-07-27 22:42:05,864 [INFO] RO1 EXTRACTION QUALITY (reviewer item 4)
+2026-07-27 22:42:05,864 [INFO] Timestamp: 20260727_224201
+2026-07-27 22:42:05,864 [INFO] OCR available: True  |  Whisper available: True
+2026-07-27 22:42:05,864 [INFO] ======================================================================
+2026-07-27 22:42:05,864 [INFO] ======================================================================
+2026-07-27 22:42:05,864 [INFO] OCR field-level accuracy
+2026-07-27 22:42:05,866 [INFO] ======================================================================
+2026-07-27 22:42:05,868 [INFO] Manifest rows: 47  |  fillable: 47  |  skipped (blank/placeholder): 0
+2026-07-27 22:42:06,141 [INFO]   driving_licence_3.jpg        licence_no           gt='WC854351'                     found=True
+2026-07-27 22:42:06,141 [INFO]   driving_licence_3.jpg        name                 gt='HEATHER ROMERO'               found=True
+2026-07-27 22:42:06,141 [INFO]   driving_licence_3.jpg        date_of_birth        gt='19/10/2004'                   found=True
+2026-07-27 22:42:06,141 [INFO]   driving_licence_3.jpg        address              gt='80311 Manning Bypass Apt. 385, North Danielle 62401' found=True
+2026-07-27 22:42:06,142 [INFO]   driving_licence_3.jpg        expiry               gt='7/10/2028'                    found=True
+2026-07-27 22:42:06,398 [INFO]   driving_licence_4.jpg        licence_no           gt='LE871269'                     found=True
+2026-07-27 22:42:06,398 [INFO]   driving_licence_4.jpg        name                 gt='RONALD KELLY'                 found=True
+2026-07-27 22:42:06,398 [INFO]   driving_licence_4.jpg        date_of_birth        gt='21/01/1959'                   found=True
+2026-07-27 22:42:06,399 [INFO]   driving_licence_4.jpg        address              gt='0 Smith Close, Port Aprilstad 2942' found=True
+2026-07-27 22:42:06,399 [INFO]   driving_licence_4.jpg        expiry               gt='16/12/2028'                   found=True
+2026-07-27 22:42:06,638 [INFO]   passport_1.jpg               surname              gt='ROMERO'                       found=True
+2026-07-27 22:42:06,639 [INFO]   passport_1.jpg               given_names          gt='GARY'                         found=True
+2026-07-27 22:42:06,639 [INFO]   passport_1.jpg               date_of_birth        gt='8/09/2004'                    found=True
+2026-07-27 22:42:06,639 [INFO]   passport_1.jpg               passport_no          gt='S1751136'                     found=True
+2026-07-27 22:42:06,639 [INFO]   passport_1.jpg               expiry               gt='8/05/2034'                    found=True
+2026-07-27 22:42:06,639 [INFO]   passport_1.jpg               place_of_birth       gt='Masonfort'                    found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               surname              gt='ARMSTRONG'                    found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               given_names          gt='BETHANY'                      found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               date_of_birth        gt='11/03/1983'                   found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               passport_no          gt='W6597733'                     found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               expiry               gt='30/11/2032'                   found=True
+2026-07-27 22:42:06,891 [INFO]   passport_2.jpg               place_of_birth       gt='Port Alexandra'               found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           account_holder_name  gt='Sharon Morales'               found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           service_address      gt='507/74 Arroyo Trail, Walkermouth NSW 29780' found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           account_no           gt='42528532'                     found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           bill_date            gt='14/06/2026'                   found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           due_date             gt='13/07/2026'                   found=True
+2026-07-27 22:42:07,124 [INFO]   utility_bill_1.jpg           amount_due           gt='$85.67 AUD'                   found=True
+2026-07-27 22:42:07,361 [INFO]   utility_bill_2.jpg           account_holder_name  gt='Brittany Freeman'             found=True
+2026-07-27 22:42:07,361 [INFO]   utility_bill_2.jpg           service_address      gt='0 Ricky Courtyard, Lake Amandamouth NT 2654' found=True
+2026-07-27 22:42:07,361 [INFO]   utility_bill_2.jpg           account_no           gt='47929741'                     found=True
+2026-07-27 22:42:07,361 [INFO]   utility_bill_2.jpg           bill_date            gt='14/06/2026'                   found=True
+2026-07-27 22:42:07,361 [INFO]   utility_bill_2.jpg           due_date             gt='6/07/2026'                    found=True
+2026-07-27 22:42:07,362 [INFO]   utility_bill_2.jpg           amount_due           gt='$479.84 AUD'                  found=True
+2026-07-27 22:42:07,616 [INFO]   bank_statement_1.jpg         account_name         gt='Michael Stephens'             found=True
+2026-07-27 22:42:07,616 [INFO]   bank_statement_1.jpg         bsb                  gt='323-633'                      found=True
+2026-07-27 22:42:07,616 [INFO]   bank_statement_1.jpg         account_no           gt='WUDY57123'                    found=True
+2026-07-27 22:42:07,616 [INFO]   bank_statement_1.jpg         opening_balance      gt='$22,767.12 AUD'               found=True
+2026-07-27 22:42:07,616 [INFO]   bank_statement_1.jpg         closing_balance      gt='$26,879.17 AUD'               found=True
+2026-07-27 22:42:07,898 [INFO]   DL.jpg                       licence_no           gt='MANUFACLIC2'                  found=True
+2026-07-27 22:42:07,898 [INFO]   DL.jpg                       name                 gt='Jane Phillip'                 found=True
+2026-07-27 22:42:07,898 [INFO]   DL.jpg                       date_of_birth        gt='1/01/1995'                    found=False
+2026-07-27 22:42:07,898 [INFO]   DL.jpg                       address              gt='1 Bourke st Melbourne 3000 VIC' found=False
+2026-07-27 22:42:08,126 [INFO]   identity driving license.jpg licence_no           gt='MANUFACLIC1'                  found=True
+2026-07-27 22:42:08,127 [INFO]   identity driving license.jpg name                 gt='John Murray'                  found=True
+2026-07-27 22:42:08,127 [INFO]   identity driving license.jpg date_of_birth        gt='1/02/1981'                    found=False
+2026-07-27 22:42:08,127 [INFO]   identity driving license.jpg address              gt='1 Flinders st Melbourne 3000 VIC' found=True
+2026-07-27 22:42:08,129 [INFO] 
+Field accuracy by document:
+2026-07-27 22:42:08,129 [INFO]   DL.jpg                       0.500
+2026-07-27 22:42:08,129 [INFO]   bank_statement_1.jpg         1.000
+2026-07-27 22:42:08,129 [INFO]   driving_licence_3.jpg        1.000
+2026-07-27 22:42:08,129 [INFO]   driving_licence_4.jpg        1.000
+2026-07-27 22:42:08,129 [INFO]   identity driving license.jpg 0.750
+2026-07-27 22:42:08,129 [INFO]   passport_1.jpg               1.000
+2026-07-27 22:42:08,129 [INFO]   passport_2.jpg               1.000
+2026-07-27 22:42:08,130 [INFO]   utility_bill_1.jpg           1.000
+2026-07-27 22:42:08,130 [INFO]   utility_bill_2.jpg           1.000
+2026-07-27 22:42:08,130 [INFO] 
+Overall field accuracy: 0.936 (44/47)
+2026-07-27 22:42:08,134 [INFO] 
+======================================================================
+2026-07-27 22:42:08,134 [INFO] Audio word error rate (WER)
+2026-07-27 22:42:08,134 [INFO] ======================================================================
+2026-07-27 22:42:08,136 [INFO] Manifest rows: 10  |  fillable: 10  |  skipped (blank/placeholder): 0
+2026-07-27 22:42:11,423 [INFO]   call_recording_3.wav         wer=0.000
+2026-07-27 22:42:16,305 [INFO]   call_recording_4.wav         wer=0.022
+2026-07-27 22:42:21,875 [INFO]   call_recording_5.wav         wer=0.049
+2026-07-27 22:42:25,488 [INFO]   call_recording_6.wav         wer=0.033
+2026-07-27 22:42:29,685 [INFO]   voice_complaint_2.wav        wer=0.019
+2026-07-27 22:42:32,713 [INFO]   voice_complaint_3.wav        wer=0.000
+2026-07-27 22:42:35,433 [INFO]   voice_complaint_4.wav        wer=0.031
+2026-07-27 22:42:36,801 [INFO]   Recording.wav                wer=0.083
+2026-07-27 22:42:38,309 [INFO]   call2.wav                    wer=0.227
+2026-07-27 22:42:41,502 [INFO]   jane complaint.wav           wer=0.095
+2026-07-27 22:42:41,504 [INFO] 
+Mean WER over 10 scored files: 0.056
+2026-07-27 22:42:41,509 [INFO] 
+======================================================================
+2026-07-27 22:42:41,509 [INFO] Done.
+2026-07-27 22:42:41,509 [INFO] ======================================================================

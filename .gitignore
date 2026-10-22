@@ -1,0 +1,39 @@
+# Fetched external corpora — never committed
+/external/tab/
+/external/tab_spans.csv
+/tab_corpus/
+
+# The synthetic corpus — published separately on Zenodo, fetched by scripts/fetch_corpus
+/data_swamp/
+
+# Regenerable pipeline artefacts
+/output/
+/cluster_results/
+/evaluation/output/
+/research_paper/figures/
+
+# Models (and the local verified backup of the Ollama model store; never published)
+ollama_models/
+ollama_models_backup*
+*.gguf
+
+# Release staging artefacts that must never enter the repository
+zenodo_bundle*
+anonymous/
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+*.egg-info/
+.pytest_cache/
+
+# OS / IDE / tooling
+.DS_Store
+Thumbs.db
+~$*
+.vscode/
+.idea/
+.claude/
+*.swp

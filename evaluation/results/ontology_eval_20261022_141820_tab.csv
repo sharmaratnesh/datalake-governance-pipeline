@@ -1,0 +1,5 @@
+method,owl_file,db_file,parses,triples,classes,object_properties,datatype_properties,individuals,subclasses_of_DataFile,malformed_iri,parse_error,offending_iri,db_records
+Rule-Based,ontology_rule_based_20261021_235159.owl,datalake_rule_based_20261021_235159.db,True,28,6,2,2,0,3,0,,,1268
+NLP,ontology_nlp_20261021_235257.owl,datalake_nlp_20261021_235257.db,True,28,6,2,2,0,3,0,,,1268
+Phi-3 Mini,ontology_llm_phi3_mini_20261022_103520.owl,db_llm_phi3_mini_tab_full.db,True,25,5,2,2,0,2,0,,,1268
+LLaMA 3.2 1B,ontology_llm_llama32_1b_20261022_023231.owl,db_llm_llama32_1b_tab_full.db,False,0,0,0,0,0,0,1,SAXParseException: file:///<repo>/output/ontology_llm_llama32_1b_20261022_023231.owl:12:27: not well-formed (invalid token),#<identities|serviceRequests|financialTransactions|unknown>,1268

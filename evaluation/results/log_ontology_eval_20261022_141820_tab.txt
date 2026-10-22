@@ -1,0 +1,15 @@
+=== SELECTED ARTEFACTS ===
+      method                                db_file                                    owl_file
+  Rule-Based datalake_rule_based_20261021_235159.db     ontology_rule_based_20261021_235159.owl
+         NLP        datalake_nlp_20261021_235257.db            ontology_nlp_20261021_235257.owl
+  Phi-3 Mini           db_llm_phi3_mini_tab_full.db  ontology_llm_phi3_mini_20261022_103520.owl
+LLaMA 3.2 1B          db_llm_llama32_1b_tab_full.db ontology_llm_llama32_1b_20261022_023231.owl
+
+=== STRUCTURAL VALIDITY ===
+      method  parses  triples  classes  object_properties  datatype_properties  individuals  malformed_iri                                                                                                                                                           parse_error                                               offending_iri
+  Rule-Based    True       28        6                  2                    2            0              0                                                                                                                                                                                                                                  
+         NLP    True       28        6                  2                    2            0              0                                                                                                                                                                                                                                  
+  Phi-3 Mini    True       25        5                  2                    2            0              0                                                                                                                                                                                                                                  
+LLaMA 3.2 1B   False        0        0                  0                    0            0              1 SAXParseException: file:///<repo>/output/ontology_llm_llama32_1b_20261022_023231.owl:12:27: not well-formed (invalid token) #<identities|serviceRequests|financialTransactions|unknown>
+
+-> evaluation\output\ontology_eval_20261022_141820_tab.csv

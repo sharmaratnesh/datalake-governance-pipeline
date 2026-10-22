@@ -1,0 +1,16 @@
+2026-10-22 11:36:37,051 [INFO] ======================================================================
+2026-10-22 11:36:37,051 [INFO] TAB SPAN-LEVEL EVALUATION (Step 6 / 6b)
+2026-10-22 11:36:37,052 [INFO] ======================================================================
+2026-10-22 11:36:37,602 [INFO] Gold sensitive-span documents: 652
+2026-10-22 11:36:50,105 [INFO] Rule-Based       partial_overlap: P=0.008 R=0.488 F1=0.015  (n=1268)
+2026-10-22 11:36:50,734 [INFO] NLP              partial_overlap: P=0.009 R=0.711 F1=0.017  (n=1268)
+2026-10-22 11:36:51,333 [INFO] LLM-phi3-mini (laptop-cpu) partial_overlap: P=0.01 R=1.0 F1=0.019  (n=1268)
+2026-10-22 11:36:51,904 [INFO] LLM-llama3.2-1b (laptop-cpu) partial_overlap: P=0.009 R=0.94 F1=0.019  (n=1268)
+2026-10-22 11:36:52,518 [INFO] LLM-phi3-mini (hpc-gpu-anchor) partial_overlap: P=0.01 R=0.948 F1=0.02  (n=1268)
+2026-10-22 11:36:53,071 [INFO] LLM-llama3.1-8b (hpc-gpu-scaleprobe) partial_overlap: P=0.01 R=0.783 F1=0.02  (n=1268)
+2026-10-22 11:36:53,072 [INFO] Human baseline (confidential_status, exact_match): kappa=0.416
+2026-10-22 11:36:53,072 [INFO] Human baseline (confidential_status, partial_overlap): kappa=0.492
+2026-10-22 11:36:53,078 [INFO] 
+Output -> <repo>\evaluation\output\tab_span_evaluation_20261022_113637.csv  (8 rows)
+2026-10-22 11:36:53,078 [INFO] NOTE: classifier span metrics use a whole-document-as-predicted-span proxy (see module docstring) — not a native span prediction. Read them as a lower bound on localization quality, not a fair comparison to a real span extractor.
+2026-10-22 11:36:53,078 [INFO] ======================================================================

@@ -1,0 +1,81 @@
+2026-10-21 23:38:57,841 [INFO] ======================================================================
+2026-10-21 23:38:57,841 [INFO] CLASSICAL BASELINES (Step 4)
+2026-10-21 23:38:57,841 [INFO] ======================================================================
+2026-10-21 23:38:57,841 [INFO] Building our-corpus text + labels (OCR/Whisper extraction)...
+2026-10-21 23:39:07,674 [INFO]   [IMAGE/OCR] 392 chars extracted
+2026-10-21 23:39:10,370 [INFO]   [AUDIO/Whisper] 'Hi, my name is Jane Philip. I raised a complaint earlier about an unexpected tra...'
+2026-10-21 23:39:15,852 [INFO]   [AUDIO/Whisper] 'Here's a realistic bank call transcript.  Ringing.  Customer, Nicole Hello, I'd ...'
+2026-10-21 23:39:23,310 [INFO]   [AUDIO/Whisper] 'Here is a realistic 6-8 line bank call transcript.  Customer, James G. Day, I'd ...'
+2026-10-21 23:39:30,494 [INFO]   [AUDIO/Whisper] 'Here is a realistic 6-8 line bank call transcript.  ringing  Misty, picking up h...'
+2026-10-21 23:39:35,388 [INFO]   [AUDIO/Whisper] 'Here is a realistic six to eight line bank call transcript.  Ringing.  Customer....'
+2026-10-21 23:39:35,391 [INFO]   [TEXT] 563 chars read
+2026-10-21 23:39:35,392 [INFO]   [TEXT] 695 chars read
+2026-10-21 23:39:35,393 [INFO]   [TEXT] 592 chars read
+2026-10-21 23:39:35,394 [INFO]   [TEXT] 623 chars read
+2026-10-21 23:39:35,395 [INFO]   [TEXT] 593 chars read
+2026-10-21 23:39:35,396 [INFO]   [TEXT] 758 chars read
+2026-10-21 23:39:35,396 [INFO]   [JSON] 851 chars
+2026-10-21 23:39:35,397 [INFO]   [JSON] 846 chars
+2026-10-21 23:39:35,398 [INFO]   [JSON] 860 chars
+2026-10-21 23:39:35,399 [INFO]   [JSON] 863 chars
+2026-10-21 23:39:35,414 [INFO]   [CSV] 14 rows, columns=['customer_id', 'name', 'dob', 'email', 'phone', 'address', 'state', 'account_type', 'balance_aud', 'kyc_verified']
+2026-10-21 23:39:35,418 [INFO]   [CSV] 11 rows, columns=['customer_id', 'name', 'dob', 'email', 'phone', 'address', 'state', 'account_type', 'balance_aud', 'kyc_verified']
+2026-10-21 23:39:35,421 [INFO]   [CSV] 8 rows, columns=['customer_id', 'name', 'dob', 'email', 'phone', 'address', 'state', 'account_type', 'balance_aud', 'kyc_verified']
+2026-10-21 23:39:35,700 [INFO]   [IMAGE/OCR] 187 chars extracted
+2026-10-21 23:39:35,995 [INFO]   [IMAGE/OCR] 203 chars extracted
+2026-10-21 23:39:36,251 [INFO]   [IMAGE/OCR] 180 chars extracted
+2026-10-21 23:39:36,253 [INFO]   [JSON] 303 chars
+2026-10-21 23:39:36,254 [INFO]   [JSON] 325 chars
+2026-10-21 23:39:36,257 [INFO]   [CSV] 9 rows, columns=['alert_id', 'account_id', 'flag_date', 'flag_type', 'amount', 'risk_score', 'status']
+2026-10-21 23:39:36,260 [INFO]   [CSV] 8 rows, columns=['alert_id', 'account_id', 'flag_date', 'flag_type', 'amount', 'risk_score', 'status']
+2026-10-21 23:39:36,485 [INFO]   [IMAGE/OCR] 116 chars extracted
+2026-10-21 23:39:36,486 [INFO]   [TEXT] 414 chars read
+2026-10-21 23:39:36,487 [INFO]   [TEXT] 258 chars read
+2026-10-21 23:39:40,547 [INFO]   [AUDIO/Whisper] 'Hi, this is Bank's customer service. How can I help you?  Hi, my name is Jane. I...'
+2026-10-21 23:39:40,550 [INFO]   [JSON] 464 chars
+2026-10-21 23:39:40,552 [INFO]   [JSON] 449 chars
+2026-10-21 23:39:40,999 [INFO]   [IMAGE/OCR] 226 chars extracted
+2026-10-21 23:39:41,519 [INFO]   [IMAGE/OCR] 244 chars extracted
+2026-10-21 23:39:43,684 [INFO]   [AUDIO/Whisper] 'Hey, will you be available for a meeting tomorrow afternoon to PM?'
+2026-10-21 23:39:43,685 [INFO]   [TEXT] 72 chars read
+2026-10-21 23:39:43,686 [INFO]   [TEXT] 33 chars read
+2026-10-21 23:39:43,687 [INFO]   [TEXT] 178 chars read
+2026-10-21 23:39:43,688 [INFO]   [TEXT] 163 chars read
+2026-10-21 23:39:43,688 [INFO]   [TEXT] 193 chars read
+2026-10-21 23:39:43,690 [INFO]   [TEXT] 198 chars read
+2026-10-21 23:39:43,691 [INFO]   [JSON] 384 chars
+2026-10-21 23:39:43,691 [INFO]   [JSON] 378 chars
+2026-10-21 23:39:43,692 [INFO]   [JSON] 371 chars
+2026-10-21 23:39:43,692 [INFO]   [JSON] 382 chars
+2026-10-21 23:39:43,696 [INFO]   [CSV] 2 rows, columns=['customerid', 'date', 'amount', 'Transaction_type']
+2026-10-21 23:39:43,701 [INFO]   [CSV] 16 rows, columns=['customerid', 'date', 'amount', 'Transaction_type', 'merchant', 'city']
+2026-10-21 23:39:43,706 [INFO]   [CSV] 6 rows, columns=['customerid', 'date', 'amount', 'Transaction_type', 'merchant', 'city']
+2026-10-21 23:39:43,712 [INFO]   [CSV] 18 rows, columns=['customerid', 'date', 'amount', 'Transaction_type', 'merchant', 'city']
+2026-10-21 23:39:43,716 [INFO]   [CSV] 18 rows, columns=['customerid', 'date', 'amount', 'Transaction_type', 'merchant', 'city']
+2026-10-21 23:39:44,020 [INFO]   [IMAGE/OCR] 296 chars extracted
+2026-10-21 23:39:44,256 [INFO]   [IMAGE/OCR] 300 chars extracted
+2026-10-21 23:39:49,554 [INFO]   [AUDIO/Whisper] 'Here is a possible voicemail message.  Good evening, I'm not sure if you'll rece...'
+2026-10-21 23:39:54,208 [INFO]   [AUDIO/Whisper] 'Here's a possible voicemail message.  G-Day, it's Jeremy Figueroa.  I'm having s...'
+2026-10-21 23:39:57,339 [INFO]   [AUDIO/Whisper] 'Here's a possible voicemail message.  Gday, this is William Richardson calling f...'
+2026-10-21 23:39:57,354 [INFO] Our corpus: 55 files with text
+2026-10-21 23:39:57,795 [INFO] ours         info_type                    LogisticRegression   acc=0.818 [0.697,0.898]  macro_f1=0.670  kappa=0.723  n=55 folds=5
+2026-10-21 23:39:57,860 [INFO] ours         info_type                    LinearSVC            acc=0.891 [0.782,0.949]  macro_f1=0.852  kappa=0.841  n=55 folds=5
+2026-10-21 23:39:57,914 [INFO] ours         info_type                    DummyClassifier      acc=0.418 [0.297,0.55]  macro_f1=0.147  kappa=0.0  n=55 folds=5
+2026-10-21 23:39:57,991 [INFO] ours         security_classification      LogisticRegression   acc=0.891 [0.782,0.949]  macro_f1=0.471  kappa=0.0  n=55 folds=5
+2026-10-21 23:39:58,053 [INFO] ours         security_classification      LinearSVC            acc=0.909 [0.804,0.961]  macro_f1=0.619  kappa=0.263  n=55 folds=5
+2026-10-21 23:39:58,103 [INFO] ours         security_classification      DummyClassifier      acc=0.891 [0.782,0.949]  macro_f1=0.471  kappa=0.0  n=55 folds=5
+2026-10-21 23:39:58,104 [INFO] Loading TAB text + labels...
+2026-10-21 23:40:08,578 [INFO] TAB: 1268 files with text
+2026-10-21 23:40:08,581 [INFO] TAB adjudicated subset (primary): 582 files
+2026-10-21 23:40:10,702 [INFO] tab          security_confidential_only_adjudicated LogisticRegression   acc=0.701 [0.663,0.737]  macro_f1=0.665  kappa=0.348  n=582 folds=5
+2026-10-21 23:40:12,816 [INFO] tab          security_confidential_only_adjudicated LinearSVC            acc=0.722 [0.684,0.757]  macro_f1=0.706  kappa=0.414  n=582 folds=5
+2026-10-21 23:40:13,989 [INFO] tab          security_confidential_only_adjudicated DummyClassifier      acc=0.586 [0.545,0.625]  macro_f1=0.369  kappa=0.0  n=582 folds=5
+2026-10-21 23:40:19,544 [INFO] tab          security_confidential_only_union LogisticRegression   acc=0.700 [0.674,0.724]  macro_f1=0.699  kappa=0.398  n=1268 folds=5
+2026-10-21 23:40:24,165 [INFO] tab          security_confidential_only_union LinearSVC            acc=0.684 [0.658,0.709]  macro_f1=0.683  kappa=0.366  n=1268 folds=5
+2026-10-21 23:40:30,092 [INFO] tab          security_confidential_only_union DummyClassifier      acc=0.514 [0.487,0.542]  macro_f1=0.340  kappa=0.0  n=1268 folds=5
+2026-10-21 23:40:34,363 [INFO] tab          security_confidential_only_intersection LogisticRegression   acc=0.735 [0.71,0.759]  macro_f1=0.687  kappa=0.392  n=1268 folds=5
+2026-10-21 23:40:39,757 [INFO] tab          security_confidential_only_intersection LinearSVC            acc=0.737 [0.712,0.761]  macro_f1=0.714  kappa=0.43  n=1268 folds=5
+2026-10-21 23:40:44,529 [INFO] tab          security_confidential_only_intersection DummyClassifier      acc=0.617 [0.59,0.643]  macro_f1=0.381  kappa=0.0  n=1268 folds=5
+2026-10-21 23:40:44,545 [INFO] 
+Output -> <repo>\evaluation\output\classical_baselines_20261021_233857.csv  (51 rows)
+2026-10-21 23:40:44,545 [INFO] ======================================================================

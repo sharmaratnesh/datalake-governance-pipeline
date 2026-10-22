@@ -1,0 +1,7 @@
+method,platform,per_record_rate_sec,fixed_overhead_sec,manual_rate_sec,breakeven_n_records
+Rule-Based,laptop-cpu,0.001,0.0,38.18,1
+NLP,laptop-cpu,0.005,0.0,38.18,1
+LLM-llama3.2-1b,laptop-cpu,8.299,0.0,38.18,1
+LLM-phi3-mini,laptop-cpu,22.806,0.0,38.18,1
+LLM-phi3:mini,hpc-gpu-anchor_phi3_mini,1.087,3893.0,38.18,105
+LLM-llama3.1:8b,hpc-gpu-scale_probe_llama31_8b,1.014,3893.0,38.18,105

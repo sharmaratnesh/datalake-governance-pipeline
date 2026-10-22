@@ -1,0 +1,15 @@
+Source: https://github.com/NorskRegnesentral/text-anonymization-benchmark
+Cloned commit SHA: 558e09e26d6b36f5f78440074e6a233946d98bd9
+Cloned: 2026-10-21
+Licence: MIT
+
+Verified file sizes:
+  echr_train.json  48,586,778 bytes (~48.6 MB)
+  echr_dev.json     12,975,955 bytes (~13.0 MB)
+  echr_test.json    13,449,138 bytes (~13.4 MB)
+
+Verified document counts:
+  train: 1014
+  dev:   127
+  test:  127
+  total: 1268

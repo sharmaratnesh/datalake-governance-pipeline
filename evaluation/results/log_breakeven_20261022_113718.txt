@@ -1,0 +1,14 @@
+2026-10-22 11:37:18,796 [INFO] ======================================================================
+2026-10-22 11:37:18,796 [INFO] BREAK-EVEN ANALYSIS (Step 8)
+2026-10-22 11:37:18,796 [INFO] Manual rate: 38.18 s/record (2100.0s / 55 records)
+2026-10-22 11:37:18,796 [INFO] ======================================================================
+2026-10-22 11:37:18,820 [INFO] Using throughput file: throughput_20261022_113712.csv
+2026-10-22 11:37:18,821 [INFO] Rule-Based       laptop-cpu             rate=0.00s/rec  overhead=0s  breakeven_n=1
+2026-10-22 11:37:18,822 [INFO] NLP              laptop-cpu             rate=0.01s/rec  overhead=0s  breakeven_n=1
+2026-10-22 11:37:18,822 [INFO] LLM-llama3.2-1b  laptop-cpu             rate=8.30s/rec  overhead=0s  breakeven_n=1
+2026-10-22 11:37:18,822 [INFO] LLM-phi3-mini    laptop-cpu             rate=22.81s/rec  overhead=0s  breakeven_n=1
+2026-10-22 11:37:18,822 [INFO] LLM-phi3:mini    hpc-gpu-anchor_phi3_mini rate=1.09s/rec  overhead=3893s  breakeven_n=105
+2026-10-22 11:37:18,822 [INFO] LLM-llama3.1:8b  hpc-gpu-scale_probe_llama31_8b rate=1.01s/rec  overhead=3893s  breakeven_n=105
+2026-10-22 11:37:18,825 [INFO] CSV -> <repo>\evaluation\output\breakeven_20261022_113718.csv
+2026-10-22 11:37:19,081 [INFO] Plot -> <repo>\evaluation\output\breakeven_20261022_113718.png
+2026-10-22 11:37:19,081 [INFO] ======================================================================

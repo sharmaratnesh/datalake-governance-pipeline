@@ -1,0 +1,16 @@
+method,class,precision,recall,f1,support
+Human (avg),confidential,0.961,1.0,0.98,49
+Human (avg),general,1.0,0.667,0.8,6
+Human (avg),macro avg,0.98,0.833,0.89,55
+Rule-Based,confidential,1.0,0.449,0.62,49
+Rule-Based,general,0.182,1.0,0.308,6
+Rule-Based,macro avg,0.591,0.724,0.464,55
+NLP,confidential,0.936,0.898,0.917,49
+NLP,general,0.375,0.5,0.429,6
+NLP,macro avg,0.656,0.699,0.673,55
+LLM-llama3.2-1b,confidential,0.842,0.653,0.736,49
+LLM-llama3.2-1b,general,0.0,0.0,0.0,6
+LLM-llama3.2-1b,macro avg,0.421,0.327,0.368,55
+LLM-phi3-mini,confidential,0.98,1.0,0.99,49
+LLM-phi3-mini,general,1.0,0.833,0.909,6
+LLM-phi3-mini,macro avg,0.99,0.917,0.949,55

@@ -1,0 +1,49 @@
+file_name,generator_category,golden_category,category_match,generator_security,golden_security,security_match,ambiguous_prefix,ambiguity_note
+bank_statement_1.jpg,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+call_recording_3.wav,service_requests,service_requests,True,confidential,confidential,True,False,
+call_recording_4.wav,service_requests,service_requests,True,confidential,confidential,True,False,
+call_recording_5.wav,service_requests,service_requests,True,confidential,confidential,True,False,
+call_recording_6.wav,service_requests,service_requests,True,confidential,confidential,True,False,
+complaint_1.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+complaint_2.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+complaint_3.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+complaint_4.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+customer_email_1.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+customer_email_2.txt,service_requests,service_requests,True,confidential,confidential,True,False,
+customer_profile_1.json,identities,identities,True,confidential,confidential,True,False,
+customer_profile_2.json,identities,identities,True,confidential,confidential,True,False,
+customer_profile_3.json,identities,identities,True,confidential,confidential,True,False,
+customer_profile_4.json,identities,identities,True,confidential,confidential,True,False,
+customers_1.csv,identities,identities,True,confidential,confidential,True,False,
+customers_2.csv,identities,identities,True,confidential,confidential,True,False,
+customers_3.csv,identities,identities,True,confidential,confidential,True,False,
+driving_licence_3.jpg,identities,identities,True,confidential,confidential,True,False,
+driving_licence_4.jpg,identities,identities,True,confidential,confidential,True,False,
+fraud_alert_1.json,service_requests,service_requests,True,confidential,confidential,True,True,"Fraud alert JSON includes customer_name and account_number (customer/account-specific, like a service request), but risk_score/recommended_action framing also resembles financial-transaction monitoring. Treated as service_requests here since it centres on a specific customer's flagged event requiring action."
+fraud_alert_2.json,service_requests,service_requests,True,confidential,confidential,True,True,"Fraud alert JSON includes customer_name and account_number (customer/account-specific, like a service request), but risk_score/recommended_action framing also resembles financial-transaction monitoring. Treated as service_requests here since it centres on a specific customer's flagged event requiring action."
+fraud_flags_1.csv,unknown,service_requests,False,confidential,confidential,True,True,"Fraud-flag list keyed by account_id/alert_id only, no customer name. Could equally be read as financial_transactions (transaction-anomaly monitoring) or service_requests (fraud handling); 'unknown' is used here as the most conservative default since no single theme dominates the field content."
+fraud_flags_2.csv,unknown,service_requests,False,confidential,confidential,True,True,"Fraud-flag list keyed by account_id/alert_id only, no customer name. Could equally be read as financial_transactions (transaction-anomaly monitoring) or service_requests (fraud handling); 'unknown' is used here as the most conservative default since no single theme dominates the field content."
+internal_note_1.txt,service_requests,unknown,False,confidential,confidential,True,True,"Internal bank employee note about an account action (KYC update, fraud alert raised, address change). Could be read as service_requests (documents a customer-account service action) or unknown (it is an internal record, not a customer-initiated request)."
+internal_note_2.txt,service_requests,unknown,False,confidential,confidential,True,True,"Internal bank employee note about an account action (KYC update, fraud alert raised, address change). Could be read as service_requests (documents a customer-account service action) or unknown (it is an internal record, not a customer-initiated request)."
+kyc_report_1.json,identities,unknown,False,confidential,confidential,True,False,
+kyc_report_2.json,identities,unknown,False,confidential,confidential,True,False,
+passport_1.jpg,identities,identities,True,confidential,confidential,True,False,
+passport_2.jpg,identities,identities,True,confidential,confidential,True,False,
+transaction_2.txt,financial_transactions,service_requests,False,confidential,general,False,False,
+transaction_3.txt,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transaction_4.txt,financial_transactions,service_requests,False,confidential,general,False,False,
+transaction_5.txt,financial_transactions,service_requests,False,confidential,general,False,False,
+transaction_6.txt,financial_transactions,service_requests,False,confidential,general,False,False,
+transaction_record_1.json,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transaction_record_2.json,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transaction_record_3.json,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transaction_record_4.json,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transactions_2.csv,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transactions_3.csv,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transactions_4.csv,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+transactions_5.csv,financial_transactions,financial_transactions,True,confidential,confidential,True,False,
+utility_bill_1.jpg,financial_transactions,unknown,False,confidential,confidential,True,True,Utility bill has billing/amount-due fields (financial-transaction-like) but is also commonly used as a proof-of-address identity-verification document (KYC-adjacent); ambiguous between financial_transactions and identities.
+utility_bill_2.jpg,financial_transactions,unknown,False,confidential,confidential,True,True,Utility bill has billing/amount-due fields (financial-transaction-like) but is also commonly used as a proof-of-address identity-verification document (KYC-adjacent); ambiguous between financial_transactions and identities.
+voice_complaint_2.wav,service_requests,service_requests,True,confidential,general,False,False,
+voice_complaint_3.wav,service_requests,service_requests,True,confidential,confidential,True,False,
+voice_complaint_4.wav,service_requests,service_requests,True,confidential,confidential,True,False,

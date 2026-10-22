@@ -1,0 +1,382 @@
+2026-10-21 22:58:54,773 [INFO] ======================================================================
+2026-10-21 22:58:54,775 [INFO] RO1 COMPREHENSIVE EVALUATION  -  All Methods vs Baseline
+2026-10-21 22:58:54,775 [INFO] Timestamp : 20261021_225854
+2026-10-21 22:58:54,775 [INFO] ======================================================================
+2026-10-21 22:58:54,825 [INFO] 
+Golden labels loaded : 55 files from evaluation_template_golden.xlsx
+2026-10-21 22:58:54,825 [INFO] Expert time          : 2220.0s
+2026-10-21 22:58:54,825 [INFO] 
+Golden label summary:
+2026-10-21 22:58:54,830 [INFO]   bank_statement_1.jpg                cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,830 [INFO]   call2.wav                           cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,830 [INFO]   call_recording_3.wav                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,830 [INFO]   call_recording_4.wav                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,830 [INFO]   call_recording_5.wav                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,831 [INFO]   call_recording_6.wav                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,831 [INFO]   complaint_1.txt                     cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,831 [INFO]   complaint_2.txt                     cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,831 [INFO]   complaint_3.txt                     cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,832 [INFO]   complaint_4.txt                     cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,832 [INFO]   customer_email_1.txt                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,832 [INFO]   customer_email_2.txt                cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,832 [INFO]   customer_profile_1.json             cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,832 [INFO]   customer_profile_2.json             cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   customer_profile_3.json             cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   customer_profile_4.json             cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   customers_1.csv                     cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   customers_2.csv                     cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   customers_3.csv                     cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   DL.jpg                              cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,833 [INFO]   driving_licence_3.jpg               cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   driving_licence_4.jpg               cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   fraud_alert_1.json                  cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   fraud_alert_2.json                  cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   fraud_flags_1.csv                   cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   fraud_flags_2.csv                   cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   identity driving license.jpg        cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,834 [INFO]   internal_note_1.txt                 cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   internal_note_2.txt                 cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   jane complaint.wav                  cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   kyc_report_1.json                   cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   kyc_report_2.json                   cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   passport_1.jpg                      cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,835 [INFO]   passport_2.jpg                      cat=identities             sec=confidential   linked=True
+2026-10-21 22:58:54,836 [INFO]   Recording.wav                       cat=unknown                sec=general        linked=False
+2026-10-21 22:58:54,836 [INFO]   Transaction 1.txt                   cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,836 [INFO]   transaction_2.txt                   cat=service_requests       sec=general        linked=False
+2026-10-21 22:58:54,836 [INFO]   transaction_3.txt                   cat=financial_transactions sec=confidential   linked=False
+2026-10-21 22:58:54,836 [INFO]   transaction_4.txt                   cat=service_requests       sec=general        linked=False
+2026-10-21 22:58:54,836 [INFO]   transaction_5.txt                   cat=service_requests       sec=general        linked=False
+2026-10-21 22:58:54,836 [INFO]   transaction_6.txt                   cat=service_requests       sec=general        linked=False
+2026-10-21 22:58:54,836 [INFO]   transaction_record_1.json           cat=financial_transactions sec=confidential   linked=False
+2026-10-21 22:58:54,837 [INFO]   transaction_record_2.json           cat=financial_transactions sec=confidential   linked=False
+2026-10-21 22:58:54,837 [INFO]   transaction_record_3.json           cat=financial_transactions sec=confidential   linked=False
+2026-10-21 22:58:54,837 [INFO]   transaction_record_4.json           cat=financial_transactions sec=confidential   linked=False
+2026-10-21 22:58:54,837 [INFO]   Transactions.csv                    cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,837 [INFO]   transactions_2.csv                  cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,837 [INFO]   transactions_3.csv                  cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,837 [INFO]   transactions_4.csv                  cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,838 [INFO]   transactions_5.csv                  cat=financial_transactions sec=confidential   linked=True
+2026-10-21 22:58:54,838 [INFO]   utility_bill_1.jpg                  cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,838 [INFO]   utility_bill_2.jpg                  cat=unknown                sec=confidential   linked=True
+2026-10-21 22:58:54,838 [INFO]   voice_complaint_2.wav               cat=service_requests       sec=general        linked=False
+2026-10-21 22:58:54,838 [INFO]   voice_complaint_3.wav               cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,838 [INFO]   voice_complaint_4.wav               cat=service_requests       sec=confidential   linked=True
+2026-10-21 22:58:54,844 [INFO] 
+Participant files    : 3 found
+2026-10-21 22:58:54,887 [INFO]   P1                cat=0.891  sec=0.964  link=1.000  time=2280s
+2026-10-21 22:58:54,913 [INFO]   P2                cat=0.818  sec=1.000  link=1.000  time=2100s
+2026-10-21 22:58:54,943 [INFO]   P3                cat=0.818  sec=0.964  link=1.000  time=1920s
+2026-10-21 22:58:54,960 [INFO] 
+Human detail CSV     : <repo>\evaluation\output\evaluation_human_detail_20261021_225854.csv
+2026-10-21 22:58:54,962 [INFO] 
+Human average        :  cat=0.842  sec=0.976  link=1.000  time=2100.0s
+2026-10-21 22:58:54,965 [INFO] 
+Automated pipeline results:
+2026-10-21 22:58:55,003 [INFO]   Rule-Based    : cat=0.764  sec=0.509  link=0.236  time=36.3s  (metadata_rule_based_20261021_222646.csv)
+2026-10-21 22:58:55,027 [INFO]   NLP           : cat=0.618  sec=0.855  link=0.255  time=35.1s  (metadata_nlp_20261021_222739.csv)
+2026-10-21 22:58:55,054 [INFO]   LLM-llama3.2-1b: cat=0.327  sec=0.582  link=0.200  time=499.8s  (metadata_llm_llama32_1b_20261021_222833.csv)
+2026-10-21 22:58:55,081 [INFO]   LLM-phi3-mini : cat=0.745  sec=0.982  link=0.400  time=1264.2s  (metadata_llm_phi3_mini_20261021_223725.csv)
+2026-10-21 22:58:55,083 [INFO] 
+======================================================================
+2026-10-21 22:58:55,083 [INFO] EVALUATION SUMMARY - 4 Factors
+2026-10-21 22:58:55,084 [INFO] ======================================================================
+2026-10-21 22:58:55,084 [INFO] Method                 Category   Security    Linkage    Overall    Time(s)
+2026-10-21 22:58:55,084 [INFO] ---------------------------------------------------------------------------
+2026-10-21 22:58:55,084 [INFO] Human (avg)               0.842      0.976      1.000      0.939       2100
+2026-10-21 22:58:55,084 [INFO] Expert Baseline           1.000      1.000      1.000      1.000       2220
+2026-10-21 22:58:55,084 [INFO] Rule-Based                0.764      0.509      0.236      0.503         36
+2026-10-21 22:58:55,084 [INFO] NLP                       0.618      0.855      0.255      0.576         35
+2026-10-21 22:58:55,085 [INFO] LLM-llama3.2-1b           0.327      0.582      0.200      0.370        500
+2026-10-21 22:58:55,085 [INFO] LLM-phi3-mini             0.745      0.982      0.400      0.709       1264
+2026-10-21 22:58:55,085 [INFO] ---------------------------------------------------------------------------
+2026-10-21 22:58:55,085 [INFO] 
+Summary CSV          : <repo>\evaluation\output\evaluation_summary_20261021_225854.csv
+2026-10-21 22:58:55,132 [INFO] Per-file CSV         : <repo>\evaluation\output\evaluation_per_file_20261021_225854.csv
+2026-10-21 22:58:55,133 [INFO] 
+-- Per-file: Data Class Category --
+2026-10-21 22:58:55,133 [INFO] File                                Golden                Rule-Based            NLP                   LLM-llama3.2-1b       LLM-phi3-mini         
+2026-10-21 22:58:55,133 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,135 [INFO] bank_statement_1.jpg                financial_transactionsfinancial_transactions✓  unknown             ✗  identities          ✗  financial_transactions✓  
+2026-10-21 22:58:55,136 [INFO] call2.wav                           service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,137 [INFO] call_recording_3.wav                service_requests      financial_transactions✗  financial_transactions✗  financial_transactions✗  service_requests    ✓  
+2026-10-21 22:58:55,138 [INFO] call_recording_4.wav                service_requests      service_requests    ✓  financial_transactions✗  service_requests    ✓  service_requests    ✓  
+2026-10-21 22:58:55,140 [INFO] call_recording_5.wav                service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,141 [INFO] call_recording_6.wav                service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,143 [INFO] complaint_1.txt                     service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,144 [INFO] complaint_2.txt                     service_requests      service_requests    ✓  service_requests    ✓  unknown             ✗  service_requests    ✓  
+2026-10-21 22:58:55,146 [INFO] complaint_3.txt                     service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,147 [INFO] complaint_4.txt                     service_requests      service_requests    ✓  service_requests    ✓  unknown             ✗  service_requests    ✓  
+2026-10-21 22:58:55,150 [INFO] customer_email_1.txt                service_requests      service_requests    ✓  financial_transactions✗  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,152 [INFO] customer_email_2.txt                service_requests      service_requests    ✓  service_requests    ✓  service_requests    ✓  service_requests    ✓  
+2026-10-21 22:58:55,152 [INFO] customer_profile_1.json             identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,153 [INFO] customer_profile_2.json             identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,154 [INFO] customer_profile_3.json             identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,154 [INFO] customer_profile_4.json             identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,155 [INFO] customers_1.csv                     identities            identities          ✓  financial_transactions✗  unknown             ✗  identities          ✓  
+2026-10-21 22:58:55,157 [INFO] customers_2.csv                     identities            identities          ✓  financial_transactions✗  unknown             ✗  identities          ✓  
+2026-10-21 22:58:55,158 [INFO] customers_3.csv                     identities            identities          ✓  unknown             ✗  unknown             ✗  identities          ✓  
+2026-10-21 22:58:55,160 [INFO] DL.jpg                              identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,161 [INFO] driving_licence_3.jpg               identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,163 [INFO] driving_licence_4.jpg               identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,164 [INFO] fraud_alert_1.json                  service_requests      financial_transactions✗  financial_transactions✗  identities          ✗  identities          ✗  
+2026-10-21 22:58:55,165 [INFO] fraud_alert_2.json                  service_requests      financial_transactions✗  service_requests    ✓  unknown             ✗  identities          ✗  
+2026-10-21 22:58:55,166 [INFO] fraud_flags_1.csv                   service_requests      financial_transactions✗  unknown             ✗  unknown             ✗  unknown             ✗  
+2026-10-21 22:58:55,167 [INFO] fraud_flags_2.csv                   service_requests      financial_transactions✗  unknown             ✗  unknown             ✗  unknown             ✗  
+2026-10-21 22:58:55,168 [INFO] identity driving license.jpg        identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,169 [INFO] internal_note_1.txt                 unknown               unknown             ✓  identities          ✗  identities          ✗  identities          ✗  
+2026-10-21 22:58:55,170 [INFO] internal_note_2.txt                 unknown               financial_transactions✗  service_requests    ✗  identities          ✗  identities          ✗  
+2026-10-21 22:58:55,171 [INFO] jane complaint.wav                  service_requests      identities          ✗  service_requests    ✓  service_requests    ✓  service_requests    ✓  
+2026-10-21 22:58:55,173 [INFO] kyc_report_1.json                   unknown               identities          ✗  service_requests    ✗  unknown             ✓  identities          ✗  
+2026-10-21 22:58:55,174 [INFO] kyc_report_2.json                   unknown               unknown             ✓  service_requests    ✗  identities          ✗  identities          ✗  
+2026-10-21 22:58:55,176 [INFO] passport_1.jpg                      identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,177 [INFO] passport_2.jpg                      identities            identities          ✓  identities          ✓  identities          ✓  identities          ✓  
+2026-10-21 22:58:55,178 [INFO] Recording.wav                       unknown               unknown             ✓  unknown             ✓  identities          ✗  unknown             ✓  
+2026-10-21 22:58:55,179 [INFO] Transaction 1.txt                   financial_transactionsfinancial_transactions✓  unknown             ✗  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,180 [INFO] transaction_2.txt                   service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  unknown             ✗  
+2026-10-21 22:58:55,181 [INFO] transaction_3.txt                   financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,183 [INFO] transaction_4.txt                   service_requests      service_requests    ✓  financial_transactions✗  unknown             ✗  unknown             ✗  
+2026-10-21 22:58:55,184 [INFO] transaction_5.txt                   service_requests      unknown             ✗  service_requests    ✓  identities          ✗  unknown             ✗  
+2026-10-21 22:58:55,185 [INFO] transaction_6.txt                   service_requests      financial_transactions✗  financial_transactions✗  unknown             ✗  unknown             ✗  
+2026-10-21 22:58:55,186 [INFO] transaction_record_1.json           financial_transactionsfinancial_transactions✓  financial_transactions✓  identities          ✗  financial_transactions✓  
+2026-10-21 22:58:55,187 [INFO] transaction_record_2.json           financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,188 [INFO] transaction_record_3.json           financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,189 [INFO] transaction_record_4.json           financial_transactionsfinancial_transactions✓  financial_transactions✓  identities          ✗  financial_transactions✓  
+2026-10-21 22:58:55,192 [INFO] Transactions.csv                    financial_transactionsfinancial_transactions✓  financial_transactions✓  financial_transactions✓  financial_transactions✓  
+2026-10-21 22:58:55,193 [INFO] transactions_2.csv                  financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,195 [INFO] transactions_3.csv                  financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,196 [INFO] transactions_4.csv                  financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,197 [INFO] transactions_5.csv                  financial_transactionsfinancial_transactions✓  financial_transactions✓  unknown             ✗  financial_transactions✓  
+2026-10-21 22:58:55,198 [INFO] utility_bill_1.jpg                  unknown               financial_transactions✗  service_requests    ✗  unknown             ✓  financial_transactions✗  
+2026-10-21 22:58:55,199 [INFO] utility_bill_2.jpg                  unknown               financial_transactions✗  service_requests    ✗  unknown             ✓  financial_transactions✗  
+2026-10-21 22:58:55,200 [INFO] voice_complaint_2.wav               service_requests      service_requests    ✓  financial_transactions✗  service_requests    ✓  service_requests    ✓  
+2026-10-21 22:58:55,202 [INFO] voice_complaint_3.wav               service_requests      service_requests    ✓  service_requests    ✓  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,203 [INFO] voice_complaint_4.wav               service_requests      unknown             ✗  identities          ✗  identities          ✗  service_requests    ✓  
+2026-10-21 22:58:55,203 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,203 [INFO] 
+-- Per-file: Security Classification --
+2026-10-21 22:58:55,203 [INFO] File                                Golden                Rule-Based            NLP                   LLM-llama3.2-1b       LLM-phi3-mini         
+2026-10-21 22:58:55,203 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,204 [INFO] bank_statement_1.jpg                confidential          general             ✗  general             ✗  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,205 [INFO] call2.wav                           confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,207 [INFO] call_recording_3.wav                confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,208 [INFO] call_recording_4.wav                confidential          general             ✗  general             ✗  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,210 [INFO] call_recording_5.wav                confidential          general             ✗  general             ✗  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,212 [INFO] call_recording_6.wav                confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,214 [INFO] complaint_1.txt                     confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,214 [INFO] complaint_2.txt                     confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,216 [INFO] complaint_3.txt                     confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,217 [INFO] complaint_4.txt                     confidential          confidential        ✓  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,219 [INFO] customer_email_1.txt                confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,220 [INFO] customer_email_2.txt                confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,221 [INFO] customer_profile_1.json             confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,222 [INFO] customer_profile_2.json             confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,224 [INFO] customer_profile_3.json             confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,225 [INFO] customer_profile_4.json             confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,226 [INFO] customers_1.csv                     confidential          confidential        ✓  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,228 [INFO] customers_2.csv                     confidential          confidential        ✓  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,229 [INFO] customers_3.csv                     confidential          confidential        ✓  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,230 [INFO] DL.jpg                              confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,231 [INFO] driving_licence_3.jpg               confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,232 [INFO] driving_licence_4.jpg               confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,233 [INFO] fraud_alert_1.json                  confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,234 [INFO] fraud_alert_2.json                  confidential          general             ✗  general             ✗  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,235 [INFO] fraud_flags_1.csv                   confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,236 [INFO] fraud_flags_2.csv                   confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,237 [INFO] identity driving license.jpg        confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,239 [INFO] internal_note_1.txt                 confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,240 [INFO] internal_note_2.txt                 confidential          general             ✗  general             ✗  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,242 [INFO] jane complaint.wav                  confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,243 [INFO] kyc_report_1.json                   confidential          confidential        ✓  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,244 [INFO] kyc_report_2.json                   confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,245 [INFO] passport_1.jpg                      confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,247 [INFO] passport_2.jpg                      confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,248 [INFO] Recording.wav                       general               general             ✓  confidential        ✗  confidential        ✗  general             ✓  
+2026-10-21 22:58:55,249 [INFO] Transaction 1.txt                   confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,250 [INFO] transaction_2.txt                   general               general             ✓  confidential        ✗  confidential        ✗  general             ✓  
+2026-10-21 22:58:55,251 [INFO] transaction_3.txt                   confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,252 [INFO] transaction_4.txt                   general               general             ✓  general             ✓  confidential        ✗  general             ✓  
+2026-10-21 22:58:55,253 [INFO] transaction_5.txt                   general               general             ✓  general             ✓  confidential        ✗  general             ✓  
+2026-10-21 22:58:55,255 [INFO] transaction_6.txt                   general               general             ✓  general             ✓  confidential        ✗  general             ✓  
+2026-10-21 22:58:55,257 [INFO] transaction_record_1.json           confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,259 [INFO] transaction_record_2.json           confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,261 [INFO] transaction_record_3.json           confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,262 [INFO] transaction_record_4.json           confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,264 [INFO] Transactions.csv                    confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,265 [INFO] transactions_2.csv                  confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,267 [INFO] transactions_3.csv                  confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,268 [INFO] transactions_4.csv                  confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,270 [INFO] transactions_5.csv                  confidential          general             ✗  confidential        ✓  general             ✗  confidential        ✓  
+2026-10-21 22:58:55,272 [INFO] utility_bill_1.jpg                  confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,275 [INFO] utility_bill_2.jpg                  confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,277 [INFO] voice_complaint_2.wav               general               general             ✓  confidential        ✗  confidential        ✗  confidential        ✗  
+2026-10-21 22:58:55,279 [INFO] voice_complaint_3.wav               confidential          confidential        ✓  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,280 [INFO] voice_complaint_4.wav               confidential          general             ✗  confidential        ✓  confidential        ✓  confidential        ✓  
+2026-10-21 22:58:55,280 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,281 [INFO] 
+-- Per-file: Customer Linkage --
+2026-10-21 22:58:55,281 [INFO] File                                Golden                Rule-Based            NLP                   LLM-llama3.2-1b       LLM-phi3-mini         
+2026-10-21 22:58:55,281 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,282 [INFO] bank_statement_1.jpg                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,283 [INFO] call2.wav                           True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,285 [INFO] call_recording_3.wav                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,286 [INFO] call_recording_4.wav                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,288 [INFO] call_recording_5.wav                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,289 [INFO] call_recording_6.wav                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,291 [INFO] complaint_1.txt                     True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,293 [INFO] complaint_2.txt                     True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,294 [INFO] complaint_3.txt                     True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,296 [INFO] complaint_4.txt                     True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,297 [INFO] customer_email_1.txt                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,299 [INFO] customer_email_2.txt                True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,300 [INFO] customer_profile_1.json             True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,301 [INFO] customer_profile_2.json             True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,302 [INFO] customer_profile_3.json             True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,304 [INFO] customer_profile_4.json             True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,305 [INFO] customers_1.csv                     True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,306 [INFO] customers_2.csv                     True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,308 [INFO] customers_3.csv                     True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,310 [INFO] DL.jpg                              True                  True                ✓  True                ✓  False               ✗  False               ✗  
+2026-10-21 22:58:55,311 [INFO] driving_licence_3.jpg               True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,313 [INFO] driving_licence_4.jpg               True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,315 [INFO] fraud_alert_1.json                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,316 [INFO] fraud_alert_2.json                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,317 [INFO] fraud_flags_1.csv                   True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,319 [INFO] fraud_flags_2.csv                   True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,320 [INFO] identity driving license.jpg        True                  True                ✓  True                ✓  False               ✗  False               ✗  
+2026-10-21 22:58:55,322 [INFO] internal_note_1.txt                 True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,323 [INFO] internal_note_2.txt                 True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,325 [INFO] jane complaint.wav                  True                  False               ✗  True                ✓  False               ✗  False               ✗  
+2026-10-21 22:58:55,328 [INFO] kyc_report_1.json                   True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,329 [INFO] kyc_report_2.json                   True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,331 [INFO] passport_1.jpg                      True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,332 [INFO] passport_2.jpg                      True                  False               ✗  False               ✗  False               ✗  True                ✓  
+2026-10-21 22:58:55,334 [INFO] Recording.wav                       False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,335 [INFO] Transaction 1.txt                   True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,336 [INFO] transaction_2.txt                   False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,338 [INFO] transaction_3.txt                   False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,339 [INFO] transaction_4.txt                   False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,340 [INFO] transaction_5.txt                   False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,343 [INFO] transaction_6.txt                   False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,344 [INFO] transaction_record_1.json           False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,345 [INFO] transaction_record_2.json           False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,347 [INFO] transaction_record_3.json           False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,348 [INFO] transaction_record_4.json           False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,349 [INFO] Transactions.csv                    True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,351 [INFO] transactions_2.csv                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,352 [INFO] transactions_3.csv                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,353 [INFO] transactions_4.csv                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,355 [INFO] transactions_5.csv                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,356 [INFO] utility_bill_1.jpg                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,358 [INFO] utility_bill_2.jpg                  True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,359 [INFO] voice_complaint_2.wav               False                 False               ✓  False               ✓  False               ✓  False               ✓  
+2026-10-21 22:58:55,362 [INFO] voice_complaint_3.wav               True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,364 [INFO] voice_complaint_4.wav               True                  False               ✗  False               ✗  False               ✗  False               ✗  
+2026-10-21 22:58:55,364 [INFO] --------------------------------------------------------------------------------------------------------------------------------------------------
+2026-10-21 22:58:55,369 [INFO] 
+Cohen's Kappa (each method vs Golden Labels):
+2026-10-21 22:58:55,369 [INFO] Method                 Kappa-Category   Kappa-Security  Kappa-Linkage
+2026-10-21 22:58:55,369 [INFO] ----------------------------------------------------------------------
+2026-10-21 22:58:55,431 [INFO] Rule-Based                      0.678            0.151          0.019
+2026-10-21 22:58:55,478 [INFO] NLP                             0.471            0.347          0.028
+2026-10-21 22:58:55,521 [INFO] LLM-llama3.2-1b                 0.151           -0.192          0.000
+2026-10-21 22:58:55,576 [INFO] LLM-phi3-mini                   0.653            0.899          0.118
+2026-10-21 22:58:55,576 [INFO] 
+Pairwise Cohen's Kappa (between automated methods):
+2026-10-21 22:58:55,576 [INFO] Method A         Method B           Category   Security    Linkage
+2026-10-21 22:58:55,576 [INFO] -----------------------------------------------------------------
+2026-10-21 22:58:55,655 [INFO] Rule-Based       NLP                   0.466      0.204      0.791
+2026-10-21 22:58:55,742 [INFO] Rule-Based       LLM-llama3.2-1b       0.084      0.122      0.000
+2026-10-21 22:58:55,822 [INFO] Rule-Based       LLM-phi3-mini         0.675      0.125     -0.066
+2026-10-21 22:58:55,906 [INFO] NLP              LLM-llama3.2-1b       0.215     -0.147      0.000
+2026-10-21 22:58:55,987 [INFO] NLP              LLM-phi3-mini         0.479      0.394     -0.094
+2026-10-21 22:58:56,072 [INFO] LLM-llama3.2-1b  LLM-phi3-mini         0.221     -0.163      0.000
+2026-10-21 22:58:56,075 [INFO] 
+Kappa CSV            : <repo>\evaluation\output\evaluation_kappa_20261021_225854.csv
+2026-10-21 22:58:56,075 [INFO] 
+======================================================================
+2026-10-21 22:58:56,075 [INFO] Per-Class Precision / Recall / F1 - Data Class Category
+2026-10-21 22:58:56,075 [INFO] ======================================================================
+2026-10-21 22:58:56,126 [INFO] 
+Human (avg):
+2026-10-21 22:58:56,126 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,126 [INFO]   identities                    1.000      1.000      1.000       13
+2026-10-21 22:58:56,126 [INFO]   service_requests              0.882      0.652      0.750       23
+2026-10-21 22:58:56,126 [INFO]   financial_transactions        1.000      1.000      1.000       12
+2026-10-21 22:58:56,126 [INFO]   unknown                       0.385      0.714      0.500        7
+2026-10-21 22:58:56,129 [INFO]   macro avg                     0.817      0.842      0.812       55
+2026-10-21 22:58:56,151 [INFO] 
+Rule-Based:
+2026-10-21 22:58:56,152 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,152 [INFO]   identities                    0.867      1.000      0.929       13
+2026-10-21 22:58:56,152 [INFO]   service_requests              1.000      0.609      0.757       23
+2026-10-21 22:58:56,152 [INFO]   financial_transactions        0.571      1.000      0.727       12
+2026-10-21 22:58:56,152 [INFO]   unknown                       0.600      0.429      0.500        7
+2026-10-21 22:58:56,155 [INFO]   macro avg                     0.760      0.759      0.728       55
+2026-10-21 22:58:56,170 [INFO] 
+NLP:
+2026-10-21 22:58:56,170 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,171 [INFO]   identities                    0.833      0.769      0.800       13
+2026-10-21 22:58:56,171 [INFO]   service_requests              0.722      0.565      0.634       23
+2026-10-21 22:58:56,171 [INFO]   financial_transactions        0.526      0.833      0.645       12
+2026-10-21 22:58:56,171 [INFO]   unknown                       0.167      0.143      0.154        7
+2026-10-21 22:58:56,173 [INFO]   macro avg                     0.562      0.578      0.558       55
+2026-10-21 22:58:56,192 [INFO] 
+LLM-llama3.2-1b:
+2026-10-21 22:58:56,192 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,192 [INFO]   identities                    0.357      0.769      0.488       13
+2026-10-21 22:58:56,192 [INFO]   service_requests              1.000      0.174      0.296       23
+2026-10-21 22:58:56,192 [INFO]   financial_transactions        0.500      0.083      0.143       12
+2026-10-21 22:58:56,192 [INFO]   unknown                       0.143      0.429      0.214        7
+2026-10-21 22:58:56,194 [INFO]   macro avg                     0.500      0.364      0.285       55
+2026-10-21 22:58:56,209 [INFO] 
+LLM-phi3-mini:
+2026-10-21 22:58:56,210 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,210 [INFO]   identities                    0.684      1.000      0.812       13
+2026-10-21 22:58:56,210 [INFO]   service_requests              1.000      0.652      0.789       23
+2026-10-21 22:58:56,210 [INFO]   financial_transactions        0.857      1.000      0.923       12
+2026-10-21 22:58:56,210 [INFO]   unknown                       0.143      0.143      0.143        7
+2026-10-21 22:58:56,212 [INFO]   macro avg                     0.671      0.699      0.667       55
+2026-10-21 22:58:56,214 [INFO] 
+Category precision/recall/F1 CSV : <repo>\evaluation\output\evaluation_category_prf_20261021_225854.csv
+2026-10-21 22:58:56,214 [INFO] 
+======================================================================
+2026-10-21 22:58:56,214 [INFO] Per-Class Precision / Recall / F1 - Security Classification
+2026-10-21 22:58:56,214 [INFO] ======================================================================
+2026-10-21 22:58:56,256 [INFO] 
+Human (avg):
+2026-10-21 22:58:56,257 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,257 [INFO]   confidential                  0.961      1.000      0.980       49
+2026-10-21 22:58:56,257 [INFO]   general                       1.000      0.667      0.800        6
+2026-10-21 22:58:56,260 [INFO]   macro avg                     0.980      0.833      0.890       55
+2026-10-21 22:58:56,273 [INFO] 
+Rule-Based:
+2026-10-21 22:58:56,275 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,275 [INFO]   confidential                  1.000      0.449      0.620       49
+2026-10-21 22:58:56,275 [INFO]   general                       0.182      1.000      0.308        6
+2026-10-21 22:58:56,278 [INFO]   macro avg                     0.591      0.724      0.464       55
+2026-10-21 22:58:56,296 [INFO] 
+NLP:
+2026-10-21 22:58:56,296 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,296 [INFO]   confidential                  0.936      0.898      0.917       49
+2026-10-21 22:58:56,297 [INFO]   general                       0.375      0.500      0.429        6
+2026-10-21 22:58:56,299 [INFO]   macro avg                     0.656      0.699      0.673       55
+2026-10-21 22:58:56,315 [INFO] 
+LLM-llama3.2-1b:
+2026-10-21 22:58:56,315 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,315 [INFO]   confidential                  0.842      0.653      0.736       49
+2026-10-21 22:58:56,315 [INFO]   general                       0.000      0.000      0.000        6
+2026-10-21 22:58:56,317 [INFO]   macro avg                     0.421      0.327      0.368       55
+2026-10-21 22:58:56,333 [INFO] 
+LLM-phi3-mini:
+2026-10-21 22:58:56,333 [INFO]   Class                     Precision     Recall         F1  Support
+2026-10-21 22:58:56,333 [INFO]   confidential                  0.980      1.000      0.990       49
+2026-10-21 22:58:56,333 [INFO]   general                       1.000      0.833      0.909        6
+2026-10-21 22:58:56,335 [INFO]   macro avg                     0.990      0.917      0.949       55
+2026-10-21 22:58:56,338 [INFO] 
+Security precision/recall/F1 CSV : <repo>\evaluation\output\evaluation_security_prf_20261021_225854.csv
+2026-10-21 22:58:56,338 [INFO] 
+======================================================================
+2026-10-21 22:58:56,338 [INFO] Evaluation complete. All outputs written to:
+2026-10-21 22:58:56,338 [INFO]   <repo>\evaluation\output
+2026-10-21 22:58:56,338 [INFO] ======================================================================

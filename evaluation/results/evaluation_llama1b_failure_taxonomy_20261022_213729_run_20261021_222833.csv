@@ -1,0 +1,56 @@
+file_name,category,detail
+bank_statement_1.jpg,valid_but_wrong_category,info_type=identities (golden=financial_transactions)
+call2.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+call_recording_3.wav,valid_but_wrong_category,info_type=financial_transactions (golden=service_requests)
+call_recording_4.wav,valid_and_correct,info_type=service_requests (golden=service_requests)
+call_recording_5.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+call_recording_6.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_1.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_2.txt,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+complaint_3.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_4.txt,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+customer_email_1.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+customer_email_2.txt,valid_and_correct,info_type=service_requests (golden=service_requests)
+customer_profile_1.json,entity_extraction_error,identities file but first_name empty
+customer_profile_2.json,entity_extraction_error,identities file but first_name empty
+customer_profile_3.json,entity_extraction_error,identities file but first_name empty
+customer_profile_4.json,entity_extraction_error,identities file but first_name empty
+customers_1.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+customers_2.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+customers_3.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+DL.jpg,entity_extraction_error,identities file but first_name empty
+driving_licence_3.jpg,entity_extraction_error,identities file but first_name empty
+driving_licence_4.jpg,entity_extraction_error,identities file but first_name empty
+fraud_alert_1.json,valid_but_wrong_category,info_type=identities (golden=service_requests)
+fraud_alert_2.json,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+fraud_flags_1.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+fraud_flags_2.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+identity driving license.jpg,entity_extraction_error,identities file but first_name empty
+internal_note_1.txt,valid_but_wrong_category,info_type=identities (golden=unknown)
+internal_note_2.txt,valid_but_wrong_category,info_type=identities (golden=unknown)
+jane complaint.wav,valid_and_correct,info_type=service_requests (golden=service_requests)
+kyc_report_1.json,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+kyc_report_2.json,valid_but_wrong_category,info_type=identities (golden=unknown)
+passport_1.jpg,entity_extraction_error,identities file but first_name empty
+passport_2.jpg,entity_extraction_error,identities file but first_name empty
+Recording.wav,valid_but_wrong_category,info_type=identities (golden=unknown)
+Transaction 1.txt,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transaction_2.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+transaction_3.txt,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transaction_4.txt,valid_but_wrong_category,info_type=unknown (golden=service_requests)
+transaction_5.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+transaction_6.txt,valid_but_wrong_category,info_type=unknown (golden=service_requests)
+transaction_record_1.json,valid_but_wrong_category,info_type=identities (golden=financial_transactions)
+transaction_record_2.json,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transaction_record_3.json,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transaction_record_4.json,valid_but_wrong_category,info_type=identities (golden=financial_transactions)
+Transactions.csv,valid_and_correct,info_type=financial_transactions (golden=financial_transactions)
+transactions_2.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transactions_3.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transactions_4.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+transactions_5.csv,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+utility_bill_1.jpg,valid_and_correct,info_type=unknown (golden=unknown)
+utility_bill_2.jpg,valid_and_correct,info_type=unknown (golden=unknown)
+voice_complaint_2.wav,valid_and_correct,info_type=service_requests (golden=service_requests)
+voice_complaint_3.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+voice_complaint_4.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)

@@ -1,0 +1,13 @@
+run,source_csv,subset,n,golden_general,sensitivity_kappa,sensitivity_accuracy,general_precision,general_recall,general_f1,n_predicted_general
+july,metadata_llm_phi3_mini_20260723_135524.csv,all_55,55,6,0.0,0.891,0.0,0.0,0.0,0
+july,metadata_llm_phi3_mini_20260723_135524.csv,non_audio_45,45,4,0.0,0.911,0.0,0.0,0.0,0
+july,metadata_llm_phi3_mini_20260723_135524.csv,audio_10,10,2,0.0,0.8,0.0,0.0,0.0,0
+october,metadata_llm_phi3_mini_20261021_223725.csv,all_55,55,6,0.899,0.982,1.0,0.833,0.909,5
+october,metadata_llm_phi3_mini_20261021_223725.csv,non_audio_45,45,4,1.0,1.0,1.0,1.0,1.0,4
+october,metadata_llm_phi3_mini_20261021_223725.csv,audio_10,10,2,0.615,0.9,1.0,0.5,0.667,1
+p2_0.40.7,metadata_llm_phi3_mini_20261022_143804.csv,all_55,55,6,0.899,0.982,1.0,0.833,0.909,5
+p2_0.40.7,metadata_llm_phi3_mini_20261022_143804.csv,non_audio_45,45,4,1.0,1.0,1.0,1.0,1.0,4
+p2_0.40.7,metadata_llm_phi3_mini_20261022_143804.csv,audio_10,10,2,0.615,0.9,1.0,0.5,0.667,1
+v0321,metadata_llm_phi3_mini_20261022_220926.csv,all_55,55,6,0.0,0.891,0.0,0.0,0.0,0
+v0321,metadata_llm_phi3_mini_20261022_220926.csv,non_audio_45,45,4,0.0,0.911,0.0,0.0,0.0,0
+v0321,metadata_llm_phi3_mini_20261022_220926.csv,audio_10,10,2,0.0,0.8,0.0,0.0,0.0,0

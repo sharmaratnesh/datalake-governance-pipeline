@@ -1,0 +1,26 @@
+method,class,precision,recall,f1,support
+Human (avg),identities,1.0,1.0,1.0,13
+Human (avg),service_requests,0.882,0.652,0.75,23
+Human (avg),financial_transactions,1.0,1.0,1.0,12
+Human (avg),unknown,0.385,0.714,0.5,7
+Human (avg),macro avg,0.817,0.842,0.812,55
+Rule-Based,identities,0.867,1.0,0.929,13
+Rule-Based,service_requests,1.0,0.609,0.757,23
+Rule-Based,financial_transactions,0.571,1.0,0.727,12
+Rule-Based,unknown,0.6,0.429,0.5,7
+Rule-Based,macro avg,0.76,0.759,0.728,55
+NLP,identities,0.833,0.769,0.8,13
+NLP,service_requests,0.722,0.565,0.634,23
+NLP,financial_transactions,0.526,0.833,0.645,12
+NLP,unknown,0.167,0.143,0.154,7
+NLP,macro avg,0.562,0.578,0.558,55
+LLM-llama3.2-1b,identities,0.357,0.769,0.488,13
+LLM-llama3.2-1b,service_requests,1.0,0.174,0.296,23
+LLM-llama3.2-1b,financial_transactions,0.5,0.083,0.143,12
+LLM-llama3.2-1b,unknown,0.143,0.429,0.214,7
+LLM-llama3.2-1b,macro avg,0.5,0.364,0.285,55
+LLM-phi3-mini,identities,0.684,1.0,0.812,13
+LLM-phi3-mini,service_requests,1.0,0.652,0.789,23
+LLM-phi3-mini,financial_transactions,0.857,1.0,0.923,12
+LLM-phi3-mini,unknown,0.143,0.143,0.143,7
+LLM-phi3-mini,macro avg,0.671,0.699,0.667,55

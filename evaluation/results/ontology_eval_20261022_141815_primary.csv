@@ -1,0 +1,5 @@
+method,owl_file,db_file,parses,triples,classes,object_properties,datatype_properties,individuals,subclasses_of_DataFile,malformed_iri,parse_error,offending_iri,db_records,predicted_customers,golden_customers,entity_tp,entity_fp,entity_fn,entity_precision,entity_recall,entity_f1,relation_tp,relation_fp,relation_fn,relation_precision,relation_recall,relation_f1,linkable_files
+Rule-Based,ontology_rule_based_20261021_222646.owl,datalake_rule_based_20261021_222646.db,True,28,6,2,2,0,3,0,,,55,2,34,2,0,32,1.0,0.059,0.111,2,0,37,1.0,0.051,0.098,39
+NLP,ontology_nlp_20261021_222739.owl,datalake_nlp_20261021_222739.db,True,28,6,2,2,0,3,0,,,55,2,34,2,0,32,1.0,0.059,0.111,3,0,36,1.0,0.077,0.143,39
+Phi-3 Mini,ontology_llm_phi3_mini_20261021_223725.owl,datalake_llm_phi3_mini_20261021_223725.db,True,28,6,2,2,0,3,0,,,55,10,34,8,2,26,0.8,0.235,0.364,8,3,31,0.727,0.205,0.32,39
+LLaMA 3.2 1B,ontology_llm_llama32_1b_20261021_222833.owl,datalake_llm_llama32_1b_20261021_222833.db,True,28,6,2,2,0,3,0,,,55,0,34,0,0,34,0.0,0.0,0.0,0,0,39,0.0,0.0,0.0,39

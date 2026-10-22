@@ -1,0 +1,117 @@
+{
+  "generated": "20261021_232749",
+  "metric": "security_confidential_only",
+  "primary_evaluation_set": {
+    "definition": "documents with non-empty quality_checked",
+    "size": 582,
+    "by_split": {
+      "train": 328,
+      "dev": 127,
+      "test": 127
+    }
+  },
+  "disagreement": {
+    "all_multi_annotator_documents": {
+      "n_documents": 274,
+      "document_level_disagreement_pct": 60.6,
+      "span_level_disagreement_pct": 34.7,
+      "total_sensitive_spans": 2110,
+      "uncorroborated_sensitive_spans": 733,
+      "inflation_factor_doc_over_span": 1.75
+    },
+    "quality_checked_multi_annotator_documents": {
+      "n_documents": 207,
+      "document_level_disagreement_pct": 59.9,
+      "span_level_disagreement_pct": 27.9,
+      "total_sensitive_spans": 1815,
+      "uncorroborated_sensitive_spans": 507,
+      "inflation_factor_doc_over_span": 2.15
+    },
+    "non_quality_checked_multi_annotator_documents": {
+      "n_documents": 67,
+      "document_level_disagreement_pct": 62.7,
+      "span_level_disagreement_pct": 76.6,
+      "total_sensitive_spans": 295,
+      "uncorroborated_sensitive_spans": 226,
+      "inflation_factor_doc_over_span": 0.82
+    },
+    "note": "document_level_disagreement_pct: % of multi-annotator docs where annotators' independently-derived document labels disagree. span_level_disagreement_pct: % of individual sensitive spans with no overlapping corroborating span from a different annotator in the same doc. inflation_factor_doc_over_span quantifies how much the doc-level OR-of-spans disjunction inflates apparent disagreement relative to the span level."
+  },
+  "cohens_kappa": {
+    "full_multi_annotator_population": {
+      "kappa": 0.235,
+      "n_pairwise_comparisons": 3173,
+      "n_documents": 274
+    },
+    "adjudicated_subset": {
+      "kappa": 0.162,
+      "n_pairwise_comparisons": 1066,
+      "n_documents": 115,
+      "note": "Pairwise Cohen's kappa pooled across quality_checked-annotator pairs in documents with >=2 quality_checked annotators \u2014 the human agreement ceiling for the primary evaluation set.",
+      "warning": "Kappa=0.162 is below the conventional 0.4 'fair agreement' threshold. The primary evaluation set's security_confidential_only label is noisy: automated-method scores against it measure agreement with an inconsistently-applied human label, not ground-truth correctness. State this plainly in the paper and adjust the external-validation framing accordingly."
+    }
+  },
+  "span_level_agreement": {
+    "identifier_type": {
+      "exact_match": {
+        "all_multi_annotator": {
+          "kappa": 0.597,
+          "n_pairs": 177277
+        },
+        "quality_checked": {
+          "kappa": 0.602,
+          "n_pairs": 164034
+        },
+        "non_quality_checked": {
+          "kappa": 0.534,
+          "n_pairs": 13243
+        }
+      },
+      "partial_overlap": {
+        "all_multi_annotator": {
+          "kappa": 0.674,
+          "n_pairs": 165332
+        },
+        "quality_checked": {
+          "kappa": 0.676,
+          "n_pairs": 153385
+        },
+        "non_quality_checked": {
+          "kappa": 0.643,
+          "n_pairs": 11947
+        }
+      }
+    },
+    "confidential_status": {
+      "exact_match": {
+        "all_multi_annotator": {
+          "kappa": 0.416,
+          "n_pairs": 177277
+        },
+        "quality_checked": {
+          "kappa": 0.439,
+          "n_pairs": 164034
+        },
+        "non_quality_checked": {
+          "kappa": 0.112,
+          "n_pairs": 13243
+        }
+      },
+      "partial_overlap": {
+        "all_multi_annotator": {
+          "kappa": 0.492,
+          "n_pairs": 165332
+        },
+        "quality_checked": {
+          "kappa": 0.519,
+          "n_pairs": 153385
+        },
+        "non_quality_checked": {
+          "kappa": 0.141,
+          "n_pairs": 11947
+        }
+      }
+    },
+    "note": "Cohen's kappa over span pairs between every annotator pair in each multi-annotator document (one direction per unordered pair, to avoid double-counting). A span with no counterpart in the other annotator's set is paired against that field's own negative category (NO_MASK / NOT_CONFIDENTIAL) rather than dropped \u2014 a missed or extra span is itself a disagreement, and dropping it would inflate kappa by only scoring the easy cases where both annotators agreed a span existed at all. exact_match pairs spans with identical character offsets only; partial_overlap pairs each span with the other annotator's max-overlapping span. identifier_type (DIRECT/QUASI/NO_MASK) is compared against confidential_status (NOT_CONFIDENTIAL + 5 special categories) over the SAME span alignment, so any kappa gap between the two fields is attributable to the label, not the alignment."
+  }
+}

@@ -1,0 +1,47 @@
+Ollama runtime-version test (A6), 2026-10-22
+=============================================
+
+Question: with identical weights, prompt, inputs and decoding, does the Ollama runtime
+version account for the July 2026 Phi-3 Mini collapse (sensitivity kappa 0.000, 0 of 55
+records labelled general)?
+
+Weights (unchanged throughout; re-hashed before and after the test)
+  phi3:mini    sha256-633fc5be925f9a484b61d6f9b9a78021eeb462100bd557309f01ba84cac26adf  3.8B Q4_0
+  llama3.2:1b  sha256-74701a8c35f6c8d9a4b91f3f3497643001d63e0c7a84e085bed452548fa88d45  1.2B Q8_0
+
+Runtimes
+  0.40.7  installed build (Windows installer, 2026-10-21 21:44). Served the October 2026 run,
+          the laptop TAB runs and 14 variance passes. Server log: single process, "Listening
+          on 127.0.0.1:11434 (version 0.40.7)" from 2026-10-21 21:44 throughout.
+  0.34.2  github.com/ollama/ollama/releases/tag/v0.34.2 (published 2026-09-15)
+          ollama-windows-amd64.zip sha256 8f3fd071a2a2f9497b562f43502c77c2b701a99d1ee5dfda28da8c786373063b
+          (matches the digest GitHub publishes for the asset)
+  0.32.1  github.com/ollama/ollama/releases/tag/v0.32.1 (published 2026-07-16)
+          ollama-windows-amd64.zip sha256 d5abdc21b64ee928d3c92880ac22da5e5b0a46b8b07179791dd8c711b35f8397
+          (matches the digest GitHub publishes for the asset)
+
+The July runs (2026-07-23 13:44-14:17 AEST = 03:44-04:17 UTC) used an unrecorded build: no
+Ollama log from July survives. The newest stable release at that moment was v0.32.3
+(published 2026-07-23 00:44 UTC, three hours earlier); before it v0.32.1 (2026-07-16).
+0.34.x was first released 2026-09-05 and cannot have produced the July run.
+
+Method
+  The older builds ran as standalone binaries (no install) on 127.0.0.1:11435, with
+  OLLAMA_NOPRUNE=1 and OLLAMA_MODELS pointing at a disposable copy of the two models
+  built from a hash-verified backup. No pull was issued at any point. Each served one
+  temperature-0 pass per model through run_variance_passes.py (unmodified pipeline,
+  /api/pull blocked). Temperature 0 and seeds were checked to be deterministic on both.
+
+Result (see variance_primary_20261022_223848.csv, primary_distribution_20261022_223948.csv)
+                        phi3 kappa  phi3 n_general  llama template echoes  llama kappa
+  July (paper)            0.000         0              28 / 55              -0.066
+  0.32.1, T=0             0.000         0              30 / 55               0.000
+  0.34.2, T=0             0.813         6               0 / 55              -0.185
+  0.40.7, T=0             0.813         6               0 / 55              -0.175
+  0.40.7, T=0.1 (x5)      0.813-0.899   5-6             0 / 55              -0.185..-0.052
+
+  Phi-3 on 0.32.1 assigns the same security label as the July run to all 55 files.
+  Phi-3 pass p3 (0.40.7) and the 0.32.1 pass received byte-identical LLM inputs
+  (0 of 55 differ) yet differ on 5 security labels: the runtime is the only variable.
+  Probe prompt, temperature 0: 0.40.7 and 0.34.2 emit identical text; 0.32.1 differs.
+  The behavioural change therefore lies between 0.32.1 and 0.34.2.

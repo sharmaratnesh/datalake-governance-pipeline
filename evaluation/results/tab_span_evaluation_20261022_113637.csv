@@ -1,0 +1,9 @@
+partial_overlap_precision,partial_overlap_recall,partial_overlap_f1,exact_match_recall,n_docs_scored,method,source_csv,exact_match_kappa_human_ceiling,n_pairs_human,partial_overlap_kappa_human_ceiling
+0.008,0.488,0.015,0.0,1268.0,Rule-Based,metadata_rule_based_20261021_235159.csv,,,
+0.009,0.711,0.017,0.0,1268.0,NLP,metadata_nlp_20261021_235257.csv,,,
+0.01,1.0,0.019,0.0,1268.0,LLM-phi3-mini (laptop-cpu),metadata_llm_phi3_mini_20261022_103520.csv,,,
+0.009,0.94,0.019,0.0,1268.0,LLM-llama3.2-1b (laptop-cpu),metadata_llm_llama32_1b_20261022_023231.csv,,,
+0.01,0.948,0.02,0.0,1268.0,LLM-phi3-mini (hpc-gpu-anchor),metadata_cluster_phi3_mini_20261022_015100.csv,,,
+0.01,0.783,0.02,0.0,1268.0,LLM-llama3.1-8b (hpc-gpu-scaleprobe),metadata_cluster_llama31_8b_20261022_030000.csv,,,
+,,,,,HUMAN_BASELINE_confidential_status,external/tab_agreement.json,0.416,177277.0,
+,,,,,HUMAN_BASELINE_confidential_status,external/tab_agreement.json,,165332.0,0.492

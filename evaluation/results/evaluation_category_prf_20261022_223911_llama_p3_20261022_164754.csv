@@ -1,0 +1,11 @@
+method,class,precision,recall,f1,support
+Human (avg),identities,1.0,1.0,1.0,13
+Human (avg),service_requests,0.882,0.652,0.75,23
+Human (avg),financial_transactions,1.0,1.0,1.0,12
+Human (avg),unknown,0.385,0.714,0.5,7
+Human (avg),macro avg,0.817,0.842,0.812,55
+LLM-llama3.2-1b,identities,0.323,0.769,0.455,13
+LLM-llama3.2-1b,service_requests,1.0,0.174,0.296,23
+LLM-llama3.2-1b,financial_transactions,0.0,0.0,0.0,12
+LLM-llama3.2-1b,unknown,0.105,0.286,0.154,7
+LLM-llama3.2-1b,macro avg,0.357,0.307,0.226,55

@@ -1,0 +1,55 @@
+# captured 2026-10-22T17:12:10+11:00
+ollama version is 0.40.7
+
+NAME              ID              SIZE      MODIFIED     
+phi3:mini         4f2222927938    2.2 GB    15 hours ago    
+llama3.2:1b       baf6a787fdff    1.3 GB    18 hours ago    
+llama3:latest     365c0bd3c000    4.7 GB    5 months ago    
+phi3:latest       4f2222927938    2.2 GB    5 months ago    
+mistral:latest    6577803aa9a0    4.4 GB    5 months ago    
+
+## ollama show phi3:mini
+  Model
+    architecture        phi3           
+    parameters          3.8B           
+    context length      131072         
+    embedding length    3072           
+    quantization        Q4_0           
+    template source     go_template    
+
+  Capabilities
+    completion    
+
+  Parameters
+    stop    "<|end|>"          
+    stop    "<|user|>"         
+    stop    "<|assistant|>"    
+
+  License
+    Microsoft.                              
+    Copyright (c) Microsoft Corporation.    
+    ...                                     
+
+## modelfile FROM:
+FROM <home>\.ollama\models\blobs\sha256-633fc5be925f9a484b61d6f9b9a78021eeb462100bd557309f01ba84cac26adf
+
+## ollama show llama3.2:1b
+  Model
+    architecture        llama          
+    parameters          1.2B           
+    context length      131072         
+    embedding length    2048           
+    quantization        Q8_0           
+    template source     go_template    
+
+  Capabilities
+    completion    
+    tools         
+
+  License
+    LLAMA 3.2 COMMUNITY LICENSE AGREEMENT                 
+    Llama 3.2 Version Release Date: September 25, 2024    
+    ...                                                   
+
+## modelfile FROM:
+FROM <home>\.ollama\models\blobs\sha256-74701a8c35f6c8d9a4b91f3f3497643001d63e0c7a84e085bed452548fa88d45

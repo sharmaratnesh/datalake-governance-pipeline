@@ -1,0 +1,29 @@
+=== SELECTED ARTEFACTS ===
+      method                                    db_file                                    owl_file
+  Rule-Based     datalake_rule_based_20261021_222646.db     ontology_rule_based_20261021_222646.owl
+         NLP            datalake_nlp_20261021_222739.db            ontology_nlp_20261021_222739.owl
+  Phi-3 Mini  datalake_llm_phi3_mini_20261021_223725.db  ontology_llm_phi3_mini_20261021_223725.owl
+LLaMA 3.2 1B datalake_llm_llama32_1b_20261021_222833.db ontology_llm_llama32_1b_20261021_222833.owl
+
+=== STRUCTURAL VALIDITY ===
+      method  parses  triples  classes  object_properties  datatype_properties  individuals  malformed_iri parse_error offending_iri
+  Rule-Based    True       28        6                  2                    2            0              0                          
+         NLP    True       28        6                  2                    2            0              0                          
+  Phi-3 Mini    True       28        6                  2                    2            0              0                          
+LLaMA 3.2 1B    True       28        6                  2                    2            0              0                          
+
+=== ENTITY EXTRACTION (customers) ===
+      method  predicted_customers  golden_customers  entity_tp  entity_fp  entity_fn  entity_precision  entity_recall  entity_f1
+  Rule-Based                    2                34          2          0         32               1.0          0.059      0.111
+         NLP                    2                34          2          0         32               1.0          0.059      0.111
+  Phi-3 Mini                   10                34          8          2         26               0.8          0.235      0.364
+LLaMA 3.2 1B                    0                34          0          0         34               0.0          0.000      0.000
+
+=== RELATION EXTRACTION (file -> customer) ===
+      method  relation_tp  relation_fp  relation_fn  relation_precision  relation_recall  relation_f1  linkable_files
+  Rule-Based            2            0           37               1.000            0.051        0.098              39
+         NLP            3            0           36               1.000            0.077        0.143              39
+  Phi-3 Mini            8            3           31               0.727            0.205        0.320              39
+LLaMA 3.2 1B            0            0           39               0.000            0.000        0.000              39
+
+-> evaluation\output\ontology_eval_20261022_141815_primary.csv

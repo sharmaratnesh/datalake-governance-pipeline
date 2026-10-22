@@ -1,0 +1,25 @@
+2026-10-22 11:36:11,280 [INFO] ======================================================================
+2026-10-22 11:36:11,280 [INFO] TAB EVALUATION — headline metric is Cohen's kappa, not accuracy
+2026-10-22 11:36:11,280 [INFO] ======================================================================
+2026-10-22 11:36:11,577 [INFO] Human inter-annotator kappa ceiling (adjudicated subset): 0.162
+2026-10-22 11:36:11,628 [INFO] Rule-Based       adjudicated   n=582   kappa=0.006  (human ceiling=0.162)  acc=0.476 [0.436,0.517]
+2026-10-22 11:36:11,635 [INFO] Rule-Based       union         n=1268  kappa=-0.013  (human ceiling=-)  acc=0.491 [0.464,0.519]
+2026-10-22 11:36:11,642 [INFO] Rule-Based       intersection  n=1268  kappa=-0.057  (human ceiling=-)  acc=0.491 [0.464,0.519]
+2026-10-22 11:36:11,668 [INFO] NLP              adjudicated   n=582   kappa=0.044  (human ceiling=0.162)  acc=0.567 [0.526,0.607]
+2026-10-22 11:36:11,675 [INFO] NLP              union         n=1268  kappa=0.012  (human ceiling=-)  acc=0.514 [0.487,0.542]
+2026-10-22 11:36:11,681 [INFO] NLP              intersection  n=1268  kappa=-0.01  (human ceiling=-)  acc=0.427 [0.4,0.455]
+2026-10-22 11:36:11,730 [INFO] LLM-phi3-mini (laptop-cpu) adjudicated   n=582   kappa=0.0  (human ceiling=0.162)  acc=0.586 [0.545,0.625]
+2026-10-22 11:36:11,741 [INFO] LLM-phi3-mini (laptop-cpu) union         n=1268  kappa=0.0  (human ceiling=-)  acc=0.514 [0.487,0.542]
+2026-10-22 11:36:11,751 [INFO] LLM-phi3-mini (laptop-cpu) intersection  n=1268  kappa=0.0  (human ceiling=-)  acc=0.383 [0.357,0.41]
+2026-10-22 11:36:11,800 [INFO] LLM-llama3.2-1b (laptop-cpu) adjudicated   n=582   kappa=-0.017  (human ceiling=0.162)  acc=0.572 [0.532,0.612]
+2026-10-22 11:36:11,811 [INFO] LLM-llama3.2-1b (laptop-cpu) union         n=1268  kappa=-0.019  (human ceiling=-)  acc=0.502 [0.474,0.529]
+2026-10-22 11:36:11,821 [INFO] LLM-llama3.2-1b (laptop-cpu) intersection  n=1268  kappa=-0.013  (human ceiling=-)  acc=0.380 [0.354,0.407]
+2026-10-22 11:36:11,854 [INFO] LLM-phi3-mini (hpc-gpu-anchor) adjudicated   n=582   kappa=0.008  (human ceiling=0.162)  acc=0.581 [0.54,0.62]
+2026-10-22 11:36:11,862 [INFO] LLM-phi3-mini (hpc-gpu-anchor) union         n=1268  kappa=0.036  (human ceiling=-)  acc=0.530 [0.502,0.557]
+2026-10-22 11:36:11,868 [INFO] LLM-phi3-mini (hpc-gpu-anchor) intersection  n=1268  kappa=0.03  (human ceiling=-)  acc=0.416 [0.39,0.444]
+2026-10-22 11:36:11,903 [INFO] LLM-llama3.1-8b (hpc-gpu-scaleprobe) adjudicated   n=582   kappa=-0.039  (human ceiling=0.162)  acc=0.541 [0.501,0.581]
+2026-10-22 11:36:11,909 [INFO] LLM-llama3.1-8b (hpc-gpu-scaleprobe) union         n=1268  kappa=0.008  (human ceiling=-)  acc=0.513 [0.485,0.54]
+2026-10-22 11:36:11,914 [INFO] LLM-llama3.1-8b (hpc-gpu-scaleprobe) intersection  n=1268  kappa=0.054  (human ceiling=-)  acc=0.455 [0.428,0.483]
+2026-10-22 11:36:11,922 [INFO] 
+Output -> <repo>\evaluation\output\tab_evaluation_20261022_113611.csv  (18 rows)
+2026-10-22 11:36:11,922 [INFO] ======================================================================

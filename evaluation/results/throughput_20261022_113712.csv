@@ -1,0 +1,7 @@
+method,platform,source,n_records,n_expected_full_corpus,total_wallclock_sec,records_per_minute,mean_latency_sec,median_latency_sec,p95_latency_sec
+Rule-Based,laptop-cpu,metadata_rule_based_20261021_235159.csv,1268,1268.0,1.88,40403.61,0.001,0.001,0.003
+NLP,laptop-cpu,metadata_nlp_20261021_235257.csv,1268,1268.0,6.63,11478.58,0.005,0.005,0.009
+LLM-llama3.2-1b,laptop-cpu,metadata_llm_llama32_1b_20261022_023231.csv,1268,1268.0,10523.21,7.23,8.299,8.206,9.623
+LLM-phi3-mini,laptop-cpu,metadata_llm_phi3_mini_20261022_103520.csv,1268,1268.0,28917.45,2.63,22.806,22.379,26.084
+LLM-phi3:mini,hpc-gpu-anchor_phi3_mini,anchor_phi3_mini.jsonl,1268,,1378.02,55.21,1.087,1.018,1.226
+LLM-llama3.1:8b,hpc-gpu-scale_probe_llama31_8b,scale_probe_llama31_8b.jsonl,1268,,1286.32,59.15,1.014,1.009,1.095

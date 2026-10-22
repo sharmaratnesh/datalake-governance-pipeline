@@ -1,0 +1,29 @@
+[14:16:30] phi3:mini p1 T=0.1 seed=1 blob=sha256-633fc5be925f
+    -> run_ts=20261022_141641 rc=0 1278.8s
+[14:37:53] phi3:mini p2 T=0.1 seed=2 blob=sha256-633fc5be925f
+    -> run_ts=20261022_143804 rc=0 1263.0s
+[14:59:00] phi3:mini p3 T=0.1 seed=3 blob=sha256-633fc5be925f
+    -> run_ts=20261022_145911 rc=0 1131.9s
+[15:17:57] phi3:mini p4 T=0.1 seed=4 blob=sha256-633fc5be925f
+    -> run_ts=20261022_151808 rc=0 1147.0s
+[15:37:08] phi3:mini p5 T=0.1 seed=5 blob=sha256-633fc5be925f
+    -> run_ts=20261022_153718 rc=0 1167.2s
+[15:56:39] phi3:mini t0_1 T=0.0 seed=0 blob=sha256-633fc5be925f
+    -> run_ts=20261022_155649 rc=0 1143.9s
+[16:15:47] phi3:mini t0_2 T=0.0 seed=0 blob=sha256-633fc5be925f
+    -> run_ts=20261022_161558 rc=0 1139.6s
+[16:34:51] llama3.2:1b p1 T=0.1 seed=1 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_163502 rc=0 476.0s
+[16:42:51] llama3.2:1b p2 T=0.1 seed=2 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_164300 rc=0 291.8s
+[16:47:47] llama3.2:1b p3 T=0.1 seed=3 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_164754 rc=0 273.4s
+[16:52:25] llama3.2:1b p4 T=0.1 seed=4 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_165233 rc=0 273.6s
+[16:57:03] llama3.2:1b p5 T=0.1 seed=5 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_165710 rc=0 269.7s
+[17:01:36] llama3.2:1b t0_1 T=0.0 seed=0 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_170144 rc=0 276.4s
+[17:06:17] llama3.2:1b t0_2 T=0.0 seed=0 blob=sha256-74701a8c35f6
+    -> run_ts=20261022_170626 rc=0 272.6s
+Manifest -> <repo>\evaluation\output\variance_runs_20261022_141628.csv

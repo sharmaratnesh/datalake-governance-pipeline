@@ -1,0 +1,11 @@
+method_a,method_b,kappa_category,kappa_security,kappa_linkage
+Golden,Rule-Based,0.678,0.151,0.019
+Golden,NLP,0.471,0.347,0.028
+Golden,LLM-llama3.2-1b,0.151,-0.192,0.0
+Golden,LLM-phi3-mini,0.653,0.899,0.118
+Rule-Based,NLP,0.466,0.204,0.791
+Rule-Based,LLM-llama3.2-1b,0.084,0.122,0.0
+Rule-Based,LLM-phi3-mini,0.675,0.125,-0.066
+NLP,LLM-llama3.2-1b,0.215,-0.147,0.0
+NLP,LLM-phi3-mini,0.479,0.394,-0.094
+LLM-llama3.2-1b,LLM-phi3-mini,0.221,-0.163,0.0

@@ -1,0 +1,13 @@
+2026-10-22 11:37:12,315 [INFO] ======================================================================
+2026-10-22 11:37:12,315 [INFO] TAB THROUGHPUT (Step 5c) — laptop-cpu and hpc-gpu kept strictly separate
+2026-10-22 11:37:12,315 [INFO] ======================================================================
+2026-10-22 11:37:12,345 [INFO] Rule-Based       laptop-cpu  n=1268  rpm=40403.61  mean=0.001s  p95=0.003s
+2026-10-22 11:37:12,351 [INFO] NLP              laptop-cpu  n=1268  rpm=11478.58  mean=0.005s  p95=0.009s
+2026-10-22 11:37:12,361 [INFO] LLM-llama3.2-1b  laptop-cpu  n=1268  rpm=7.23  mean=8.299s  p95=9.623s
+2026-10-22 11:37:12,373 [INFO] LLM-phi3-mini    laptop-cpu  n=1268  rpm=2.63  mean=22.806s  p95=26.084s
+2026-10-22 11:37:12,389 [INFO] ablations.jsonl: no processing_sec field (not a timing run, e.g. decoding ablations) — skipping for throughput
+2026-10-22 11:37:12,408 [INFO] LLM-phi3:mini    hpc-gpu-anchor_phi3_mini n=1268  rpm=55.21  mean=1.087s  p95=1.226s
+2026-10-22 11:37:12,425 [INFO] LLM-llama3.1:8b  hpc-gpu-scale_probe_llama31_8b n=1268  rpm=59.15  mean=1.014s  p95=1.095s
+2026-10-22 11:37:12,432 [INFO] 
+Output -> <repo>\evaluation\output\throughput_20261022_113712.csv  (6 rows)
+2026-10-22 11:37:12,432 [INFO] ======================================================================

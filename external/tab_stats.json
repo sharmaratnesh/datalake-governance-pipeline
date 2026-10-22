@@ -1,0 +1,121 @@
+{
+  "generated": "20261021_233624",
+  "seed": 42,
+  "limit": null,
+  "splits": {
+    "train": {
+      "document_count": 1014,
+      "primary_evaluation_set_size": 328,
+      "class_balance": {
+        "security_classification": {
+          "confidential": 1014
+        },
+        "security_confidential_only_adjudicated": {
+          "general": 145,
+          "(no quality_checked)": 686,
+          "confidential": 183
+        },
+        "security_confidential_only_union": {
+          "general": 540,
+          "confidential": 474
+        },
+        "security_confidential_only_intersection": {
+          "general": 582,
+          "confidential": 432
+        }
+      },
+      "character_length": {
+        "min": 1120,
+        "max": 29673,
+        "mean": 8153.1,
+        "median": 5598.0
+      },
+      "span_counts_by_type": {
+        "CODE": 2300,
+        "ORG": 26889,
+        "DEM": 4933,
+        "PERSON": 14958,
+        "DATETIME": 33523,
+        "LOC": 5830,
+        "QUANTITY": 2554,
+        "MISC": 4043
+      }
+    },
+    "dev": {
+      "document_count": 127,
+      "primary_evaluation_set_size": 127,
+      "class_balance": {
+        "security_classification": {
+          "confidential": 127
+        },
+        "security_confidential_only_adjudicated": {
+          "general": 47,
+          "confidential": 80
+        },
+        "security_confidential_only_union": {
+          "general": 34,
+          "confidential": 93
+        },
+        "security_confidential_only_intersection": {
+          "general": 100,
+          "confidential": 27
+        }
+      },
+      "character_length": {
+        "min": 1484,
+        "max": 13305,
+        "mean": 5266.1,
+        "median": 4038
+      },
+      "span_counts_by_type": {
+        "CODE": 2525,
+        "ORG": 6462,
+        "DEM": 1851,
+        "PERSON": 4679,
+        "DATETIME": 9793,
+        "LOC": 1961,
+        "QUANTITY": 748,
+        "MISC": 1416
+      }
+    },
+    "test": {
+      "document_count": 127,
+      "primary_evaluation_set_size": 127,
+      "class_balance": {
+        "security_classification": {
+          "confidential": 127
+        },
+        "security_confidential_only_adjudicated": {
+          "general": 49,
+          "confidential": 78
+        },
+        "security_confidential_only_union": {
+          "general": 42,
+          "confidential": 85
+        },
+        "security_confidential_only_intersection": {
+          "general": 100,
+          "confidential": 27
+        }
+      },
+      "character_length": {
+        "min": 1511,
+        "max": 12760,
+        "mean": 5099.5,
+        "median": 3886
+      },
+      "span_counts_by_type": {
+        "CODE": 1646,
+        "ORG": 7344,
+        "DEM": 1899,
+        "PERSON": 4685,
+        "DATETIME": 10352,
+        "LOC": 2191,
+        "MISC": 1585,
+        "QUANTITY": 839
+      }
+    }
+  },
+  "primary_evaluation_set_total": 582,
+  "note": "security_classification is descriptive only (saturated on TAB, not a validation metric). security_confidential_only_adjudicated is the primary metric, scored only on documents with a non-empty quality_checked list; union/intersection are sensitivity analyses over all documents. See external/tab_agreement.json for the inter-annotator agreement analysis (Cohen's kappa, document- vs span-level disagreement) behind this design."
+}

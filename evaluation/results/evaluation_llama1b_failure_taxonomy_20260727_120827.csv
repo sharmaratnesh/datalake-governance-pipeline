@@ -1,0 +1,56 @@
+file_name,category,detail
+bank_statement_1.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+call2.wav,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+call_recording_3.wav,valid_but_wrong_category,info_type=financial_transactions (golden=service_requests)
+call_recording_4.wav,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+call_recording_5.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+call_recording_6.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_1.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_2.txt,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+complaint_3.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+complaint_4.txt,schema_serialisation_failure,No valid JSON object could be extracted from the raw response
+customer_email_1.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+customer_email_2.txt,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+customer_profile_1.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+customer_profile_2.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+customer_profile_3.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+customer_profile_4.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+customers_1.csv,entity_extraction_error,identities file but first_name empty
+customers_2.csv,entity_extraction_error,identities file but first_name empty
+customers_3.csv,entity_extraction_error,identities file but first_name empty
+DL.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+driving_licence_3.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+driving_licence_4.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+fraud_alert_1.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+fraud_alert_2.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+fraud_flags_1.csv,valid_but_wrong_category,info_type=identities (golden=service_requests)
+fraud_flags_2.csv,valid_but_wrong_category,info_type=identities (golden=service_requests)
+identity driving license.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+internal_note_1.txt,valid_but_wrong_category,info_type=identities (golden=unknown)
+internal_note_2.txt,valid_but_wrong_category,info_type=identities (golden=unknown)
+jane complaint.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+kyc_report_1.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+kyc_report_2.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+passport_1.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+passport_2.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+Recording.wav,valid_but_wrong_category,info_type=identities (golden=unknown)
+Transaction 1.txt,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_2.txt,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_3.txt,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_4.txt,valid_but_wrong_category,info_type=unknown (golden=service_requests)
+transaction_5.txt,valid_but_wrong_category,info_type=identities (golden=service_requests)
+transaction_6.txt,valid_but_wrong_category,info_type=unknown (golden=service_requests)
+transaction_record_1.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_record_2.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_record_3.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+transaction_record_4.json,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+Transactions.csv,valid_and_correct,info_type=financial_transactions (golden=financial_transactions)
+transactions_2.csv,entity_extraction_error,"malformed/hallucinated customer_id: '<any ID number found such as MANUFACLIC or account number, else empty>'"
+transactions_3.csv,valid_and_correct,info_type=financial_transactions (golden=financial_transactions)
+transactions_4.csv,valid_but_wrong_category,info_type=unknown (golden=financial_transactions)
+transactions_5.csv,entity_extraction_error,"malformed/hallucinated customer_id: '<any ID number found such as MANUFACLIC or account number, else empty>'"
+utility_bill_1.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+utility_bill_2.jpg,placeholder_echo,info_type='<identities|service_requests|financial_transactions|unknown>' security_class='<confidential|general>'
+voice_complaint_2.wav,valid_and_correct,info_type=service_requests (golden=service_requests)
+voice_complaint_3.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)
+voice_complaint_4.wav,valid_but_wrong_category,info_type=identities (golden=service_requests)

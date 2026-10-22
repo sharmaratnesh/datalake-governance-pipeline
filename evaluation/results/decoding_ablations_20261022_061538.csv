@@ -1,0 +1,6 @@
+condition,platform,n_docs,n_valid_output,valid_output_rate,n_scored_vs_adjudicated,n_correct,accuracy_vs_adjudicated,mean_attempts_used
+a,hpc-gpu-ablations,1268,1232,0.972,562,329,0.585,1.0
+b,hpc-gpu-ablations,1268,1259,0.993,578,339,0.587,1.054
+c,hpc-gpu-ablations,1268,1268,1.0,582,339,0.582,1.0
+d,hpc-gpu-ablations,1268,1265,0.998,579,322,0.556,1.0
+e,hpc-gpu-ablations,1268,1268,1.0,582,321,0.552,1.0

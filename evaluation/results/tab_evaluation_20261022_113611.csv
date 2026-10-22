@@ -1,0 +1,19 @@
+method,derivation,n,cohens_kappa,human_kappa_ceiling,accuracy,accuracy_wilson_lo,accuracy_wilson_hi,source_csv
+Rule-Based,adjudicated,582,0.006,0.162,0.476,0.436,0.517,metadata_rule_based_20261021_235159.csv
+Rule-Based,union,1268,-0.013,,0.491,0.464,0.519,metadata_rule_based_20261021_235159.csv
+Rule-Based,intersection,1268,-0.057,,0.491,0.464,0.519,metadata_rule_based_20261021_235159.csv
+NLP,adjudicated,582,0.044,0.162,0.567,0.526,0.607,metadata_nlp_20261021_235257.csv
+NLP,union,1268,0.012,,0.514,0.487,0.542,metadata_nlp_20261021_235257.csv
+NLP,intersection,1268,-0.01,,0.427,0.4,0.455,metadata_nlp_20261021_235257.csv
+LLM-phi3-mini (laptop-cpu),adjudicated,582,0.0,0.162,0.586,0.545,0.625,metadata_llm_phi3_mini_20261022_103520.csv
+LLM-phi3-mini (laptop-cpu),union,1268,0.0,,0.514,0.487,0.542,metadata_llm_phi3_mini_20261022_103520.csv
+LLM-phi3-mini (laptop-cpu),intersection,1268,0.0,,0.383,0.357,0.41,metadata_llm_phi3_mini_20261022_103520.csv
+LLM-llama3.2-1b (laptop-cpu),adjudicated,582,-0.017,0.162,0.572,0.532,0.612,metadata_llm_llama32_1b_20261022_023231.csv
+LLM-llama3.2-1b (laptop-cpu),union,1268,-0.019,,0.502,0.474,0.529,metadata_llm_llama32_1b_20261022_023231.csv
+LLM-llama3.2-1b (laptop-cpu),intersection,1268,-0.013,,0.38,0.354,0.407,metadata_llm_llama32_1b_20261022_023231.csv
+LLM-phi3-mini (hpc-gpu-anchor),adjudicated,582,0.008,0.162,0.581,0.54,0.62,metadata_cluster_phi3_mini_20261022_015100.csv
+LLM-phi3-mini (hpc-gpu-anchor),union,1268,0.036,,0.53,0.502,0.557,metadata_cluster_phi3_mini_20261022_015100.csv
+LLM-phi3-mini (hpc-gpu-anchor),intersection,1268,0.03,,0.416,0.39,0.444,metadata_cluster_phi3_mini_20261022_015100.csv
+LLM-llama3.1-8b (hpc-gpu-scaleprobe),adjudicated,582,-0.039,0.162,0.541,0.501,0.581,metadata_cluster_llama31_8b_20261022_030000.csv
+LLM-llama3.1-8b (hpc-gpu-scaleprobe),union,1268,0.008,,0.513,0.485,0.54,metadata_cluster_llama31_8b_20261022_030000.csv
+LLM-llama3.1-8b (hpc-gpu-scaleprobe),intersection,1268,0.054,,0.455,0.428,0.483,metadata_cluster_llama31_8b_20261022_030000.csv

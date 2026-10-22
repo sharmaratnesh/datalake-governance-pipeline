@@ -1,0 +1,158 @@
+2026-07-27 12:08:27,019 [INFO] ======================================================================
+2026-07-27 12:08:27,019 [INFO] RO1 ROBUSTNESS ANALYSES (reviewer-requested, items 1/2/3/5/6)
+2026-07-27 12:08:27,019 [INFO] Timestamp: 20260727_120827
+2026-07-27 12:08:27,019 [INFO] ======================================================================
+2026-07-27 12:08:27,020 [INFO] Reading per-file evaluation CSV: <repo>\evaluation\output\evaluation_per_file_20260723_155341.csv
+2026-07-27 12:08:27,031 [INFO] Rows loaded: 55 (expected 55)
+2026-07-27 12:08:27,031 [INFO] 
+======================================================================
+2026-07-27 12:08:27,031 [INFO] Item 1a: Wilson 95% Confidence Intervals (n = 55)
+2026-07-27 12:08:27,032 [INFO] ======================================================================
+2026-07-27 12:08:27,032 [INFO] NOTE: 'Human Average' rows use per-file MAJORITY VOTE across the 3 participants (same convention as the Kappa human-average elsewhere in this project), not the mean-of-individual-accuracies used for the headline Human Average figure in evaluation_summary.csv. The two will not be numerically identical; this is disclosed for reproducibility.
+2026-07-27 12:08:27,037 [INFO] Method                       Metric      Correct/N     Acc             95% CI
+2026-07-27 12:08:27,037 [INFO] ------------------------------------------------------------------------------
+2026-07-27 12:08:27,038 [INFO] Rule-Based                   category    42/55       0.764   [0.637, 0.856]
+2026-07-27 12:08:27,038 [INFO] Rule-Based                   security    28/55       0.509   [0.381, 0.636]
+2026-07-27 12:08:27,039 [INFO] Rule-Based                   overall     21/55       0.382   [0.265, 0.514]
+2026-07-27 12:08:27,039 [INFO] NLP                          category    34/55       0.618   [0.486, 0.735]
+2026-07-27 12:08:27,039 [INFO] NLP                          security    47/55       0.855   [0.738, 0.924]
+2026-07-27 12:08:27,039 [INFO] NLP                          overall     30/55       0.545   [0.415, 0.670]
+2026-07-27 12:08:27,039 [INFO] LLM-LLaMA3.2:1b              category     8/55       0.145   [0.076, 0.262]
+2026-07-27 12:08:27,040 [INFO] LLM-LLaMA3.2:1b              security    21/55       0.382   [0.265, 0.514]
+2026-07-27 12:08:27,040 [INFO] LLM-LLaMA3.2:1b              overall      7/55       0.127   [0.063, 0.240]
+2026-07-27 12:08:27,040 [INFO] LLM-Phi3:mini                category    41/55       0.745   [0.617, 0.842]
+2026-07-27 12:08:27,040 [INFO] LLM-Phi3:mini                security    49/55       0.891   [0.782, 0.949]
+2026-07-27 12:08:27,040 [INFO] LLM-Phi3:mini                overall     39/55       0.709   [0.579, 0.812]
+2026-07-27 12:08:27,040 [INFO] Human (avg, majority vote)   category    45/55       0.818   [0.697, 0.898]
+2026-07-27 12:08:27,041 [INFO] Human (avg, majority vote)   security    53/55       0.964   [0.877, 0.990]
+2026-07-27 12:08:27,041 [INFO] Human (avg, majority vote)   overall     44/55       0.800   [0.676, 0.884]
+2026-07-27 12:08:27,044 [INFO] 
+======================================================================
+2026-07-27 12:08:27,044 [INFO] Item 1b: Paired McNemar Test - Security Decision (top-2 automated methods)
+2026-07-27 12:08:27,044 [INFO] ======================================================================
+2026-07-27 12:08:27,044 [INFO] Security accuracy ranking: LLM-Phi3:mini=0.891, NLP=0.855, Rule-Based=0.509, LLM-LLaMA3.2:1b=0.382
+2026-07-27 12:08:27,044 [INFO] Selected pair (top 2): LLM-Phi3:mini vs NLP
+2026-07-27 12:08:27,045 [INFO] Contingency table (rows=LLM-Phi3:mini correct/incorrect, cols=NLP correct/incorrect):
+2026-07-27 12:08:27,045 [INFO]   both_correct=44  LLM-Phi3:mini_only=5  NLP_only=3  both_wrong=3
+2026-07-27 12:08:27,045 [INFO] McNemar exact test: statistic=3.0000  p-value=0.7266
+2026-07-27 12:08:27,045 [INFO] NOTE: only 8 discordant pairs (files where the two methods disagree) out of n=55 - the exact binomial test is appropriate here, but treat the p-value as low-powered evidence given so few discordant cases.
+2026-07-27 12:08:27,046 [INFO] 
+======================================================================
+2026-07-27 12:08:27,046 [INFO] Item 2: Phase 1 (manually authored, n=7) vs Phase 2 (generated, n=48)
+2026-07-27 12:08:27,046 [INFO] ======================================================================
+2026-07-27 12:08:27,047 [INFO] Phase 1 files matched: 7 (expected 7)
+2026-07-27 12:08:27,047 [INFO] Phase 2 files matched: 48 (expected 48)
+2026-07-27 12:08:27,047 [INFO] 
+Method               Phase       n   Category   Security    Linkage
+2026-07-27 12:08:27,047 [INFO] --------------------------------------------------------------------
+2026-07-27 12:08:27,048 [INFO] Rule-Based           Phase 1     7      0.857      0.571      0.429
+2026-07-27 12:08:27,048 [INFO] Rule-Based           Phase 2    48      0.750      0.500      0.208
+2026-07-27 12:08:27,048 [INFO] NLP                  Phase 1     7      0.857      0.857      0.571
+2026-07-27 12:08:27,048 [INFO] NLP                  Phase 2    48      0.583      0.854      0.208
+2026-07-27 12:08:27,049 [INFO] LLM-LLaMA3.2:1b      Phase 1     7      0.143      0.286      0.143
+2026-07-27 12:08:27,049 [INFO] LLM-LLaMA3.2:1b      Phase 2    48      0.146      0.396      0.208
+2026-07-27 12:08:27,049 [INFO] LLM-Phi3:mini        Phase 1     7      1.000      0.857      0.143
+2026-07-27 12:08:27,049 [INFO] LLM-Phi3:mini        Phase 2    48      0.708      0.896      0.292
+2026-07-27 12:08:27,051 [INFO] Human (avg, maj.vote) Phase 1     7      1.000      1.000        n/a
+2026-07-27 12:08:27,053 [INFO] Human (avg, maj.vote) Phase 2    48      0.792      0.958        n/a
+2026-07-27 12:08:27,054 [INFO] 
+Generator-regularity check (Phase 2 accuracy minus Phase 1 accuracy, category):
+2026-07-27 12:08:27,057 [INFO]   Human (avg, majority vote)   Phase1=1.000  Phase2=0.792  diff=-0.208
+2026-07-27 12:08:27,057 [INFO]   LLM-LLaMA3.2:1b              Phase1=0.143  Phase2=0.146  diff=+0.003
+2026-07-27 12:08:27,057 [INFO]   LLM-Phi3:mini                Phase1=1.000  Phase2=0.708  diff=-0.292
+2026-07-27 12:08:27,057 [INFO]   NLP                          Phase1=0.857  Phase2=0.583  diff=-0.274
+2026-07-27 12:08:27,057 [INFO]   Rule-Based                   Phase1=0.857  Phase2=0.750  diff=-0.107
+2026-07-27 12:08:27,058 [INFO] 
+======================================================================
+2026-07-27 12:08:27,058 [INFO] Item 3: Accuracy by File Type
+2026-07-27 12:08:27,058 [INFO] ======================================================================
+2026-07-27 12:08:27,059 [INFO] File-type counts: {'txt': 14, 'json': 12, 'wav': 10, 'csv': 10, 'jpg': 9}
+2026-07-27 12:08:27,059 [INFO] 
+Method               Type      n   Category   Security    Linkage
+2026-07-27 12:08:27,059 [INFO] ------------------------------------------------------------------
+2026-07-27 12:08:27,060 [INFO] Rule-Based           csv      10      0.800      0.300      0.000
+2026-07-27 12:08:27,060 [INFO] Rule-Based           jpg       9      0.778      0.889      0.222
+2026-07-27 12:08:27,060 [INFO] Rule-Based           json     12      0.750      0.500      0.333
+2026-07-27 12:08:27,060 [INFO] Rule-Based           txt      14      0.786      0.429      0.357
+2026-07-27 12:08:27,061 [INFO] Rule-Based           wav      10      0.700      0.500      0.200
+2026-07-27 12:08:27,061 [INFO] NLP                  csv      10      0.500      1.000      0.000
+2026-07-27 12:08:27,061 [INFO] NLP                  jpg       9      0.667      0.889      0.222
+2026-07-27 12:08:27,062 [INFO] NLP                  json     12      0.750      0.917      0.333
+2026-07-27 12:08:27,062 [INFO] NLP                  txt      14      0.571      0.857      0.357
+2026-07-27 12:08:27,062 [INFO] NLP                  wav      10      0.600      0.600      0.300
+2026-07-27 12:08:27,063 [INFO] LLM-LLaMA3.2:1b      csv      10      0.700      1.000      0.000
+2026-07-27 12:08:27,063 [INFO] LLM-LLaMA3.2:1b      jpg       9      0.000      0.000      0.000
+2026-07-27 12:08:27,063 [INFO] LLM-LLaMA3.2:1b      json     12      0.000      0.000      0.333
+2026-07-27 12:08:27,063 [INFO] LLM-LLaMA3.2:1b      txt      14      0.000      0.357      0.357
+2026-07-27 12:08:27,064 [INFO] LLM-LLaMA3.2:1b      wav      10      0.100      0.600      0.200
+2026-07-27 12:08:27,064 [INFO] LLM-Phi3:mini        csv      10      0.800      1.000      0.000
+2026-07-27 12:08:27,064 [INFO] LLM-Phi3:mini        jpg       9      0.778      1.000      0.444
+2026-07-27 12:08:27,065 [INFO] LLM-Phi3:mini        json     12      0.667      1.000      0.333
+2026-07-27 12:08:27,065 [INFO] LLM-Phi3:mini        txt      14      0.571      0.714      0.357
+2026-07-27 12:08:27,065 [INFO] LLM-Phi3:mini        wav      10      1.000      0.800      0.200
+2026-07-27 12:08:27,066 [INFO] 
+WAV vs non-WAV category accuracy check (transcription-error compounding):
+2026-07-27 12:08:27,067 [INFO]   Rule-Based           wav=0.700  other_types_avg=0.778  diff=-0.078
+2026-07-27 12:08:27,068 [INFO]   NLP                  wav=0.600  other_types_avg=0.622  diff=-0.022
+2026-07-27 12:08:27,069 [INFO]   LLM-LLaMA3.2:1b      wav=0.100  other_types_avg=0.175  diff=-0.075
+2026-07-27 12:08:27,070 [INFO]   LLM-Phi3:mini        wav=1.000  other_types_avg=0.704  diff=+0.296
+2026-07-27 12:08:27,071 [INFO] 
+======================================================================
+2026-07-27 12:08:27,072 [INFO] Item 5: Generator-Intended Labels vs Expert-Consensus Golden Labels (Phase 2 only)
+2026-07-27 12:08:27,072 [INFO] ======================================================================
+2026-07-27 12:08:27,074 [INFO] 
+Phase 2 files compared: 48
+2026-07-27 12:08:27,074 [INFO] Category agreement (generator-intended vs golden): 36/48 = 0.750
+2026-07-27 12:08:27,074 [INFO] Security agreement (generator-intended vs golden): 43/48 = 0.896
+2026-07-27 12:08:27,074 [INFO] Files from an a-priori ambiguous prefix (flagged before comparison, not after seeing disagreement): 8/48
+2026-07-27 12:08:27,074 [INFO] 
+All category disagreements (generator-intended vs golden):
+2026-07-27 12:08:27,074 [INFO]   fraud_flags_1.csv            generator=unknown                  golden=service_requests         [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,074 [INFO]       note: Fraud-flag list keyed by account_id/alert_id only, no customer name. Could equally be read as financial_transactions (transaction-anomaly monitoring) or service_requests (fraud handling); 'unknown' is used here as the most conservative default since no single theme dominates the field content.
+2026-07-27 12:08:27,075 [INFO]   fraud_flags_2.csv            generator=unknown                  golden=service_requests         [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,075 [INFO]       note: Fraud-flag list keyed by account_id/alert_id only, no customer name. Could equally be read as financial_transactions (transaction-anomaly monitoring) or service_requests (fraud handling); 'unknown' is used here as the most conservative default since no single theme dominates the field content.
+2026-07-27 12:08:27,075 [INFO]   internal_note_1.txt          generator=service_requests         golden=unknown                  [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,075 [INFO]       note: Internal bank employee note about an account action (KYC update, fraud alert raised, address change). Could be read as service_requests (documents a customer-account service action) or unknown (it is an internal record, not a customer-initiated request).
+2026-07-27 12:08:27,075 [INFO]   internal_note_2.txt          generator=service_requests         golden=unknown                  [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,075 [INFO]       note: Internal bank employee note about an account action (KYC update, fraud alert raised, address change). Could be read as service_requests (documents a customer-account service action) or unknown (it is an internal record, not a customer-initiated request).
+2026-07-27 12:08:27,075 [INFO]   kyc_report_1.json            generator=identities               golden=unknown                 
+2026-07-27 12:08:27,075 [INFO]   kyc_report_2.json            generator=identities               golden=unknown                 
+2026-07-27 12:08:27,075 [INFO]   transaction_2.txt            generator=financial_transactions   golden=service_requests        
+2026-07-27 12:08:27,075 [INFO]   transaction_4.txt            generator=financial_transactions   golden=service_requests        
+2026-07-27 12:08:27,075 [INFO]   transaction_5.txt            generator=financial_transactions   golden=service_requests        
+2026-07-27 12:08:27,075 [INFO]   transaction_6.txt            generator=financial_transactions   golden=service_requests        
+2026-07-27 12:08:27,075 [INFO]   utility_bill_1.jpg           generator=financial_transactions   golden=unknown                  [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,076 [INFO]       note: Utility bill has billing/amount-due fields (financial-transaction-like) but is also commonly used as a proof-of-address identity-verification document (KYC-adjacent); ambiguous between financial_transactions and identities.
+2026-07-27 12:08:27,076 [INFO]   utility_bill_2.jpg           generator=financial_transactions   golden=unknown                  [FROM AMBIGUOUS PREFIX]
+2026-07-27 12:08:27,076 [INFO]       note: Utility bill has billing/amount-due fields (financial-transaction-like) but is also commonly used as a proof-of-address identity-verification document (KYC-adjacent); ambiguous between financial_transactions and identities.
+2026-07-27 12:08:27,076 [INFO] 
+All security disagreements (generator-intended vs golden):
+2026-07-27 12:08:27,076 [INFO]   transaction_2.txt            generator=confidential   golden=general       
+2026-07-27 12:08:27,076 [INFO]   transaction_4.txt            generator=confidential   golden=general       
+2026-07-27 12:08:27,076 [INFO]   transaction_5.txt            generator=confidential   golden=general       
+2026-07-27 12:08:27,076 [INFO]   transaction_6.txt            generator=confidential   golden=general       
+2026-07-27 12:08:27,076 [INFO]   voice_complaint_2.wav        generator=confidential   golden=general       
+2026-07-27 12:08:27,077 [INFO] 
+======================================================================
+2026-07-27 12:08:27,078 [INFO] Item 6: LLaMA 3.2 1B Failure Taxonomy
+2026-07-27 12:08:27,078 [INFO] ======================================================================
+2026-07-27 12:08:27,078 [INFO] Reading raw LLM log: <repo>\output\log_llm_llama32_1b_20260723_134633.txt
+2026-07-27 12:08:27,081 [INFO] File blocks parsed from log: 55 (expected 55)
+2026-07-27 12:08:27,082 [INFO] 
+Failure taxonomy over 55 files:
+2026-07-27 12:08:27,083 [INFO]   placeholder_echo                :  28 (51%)
+2026-07-27 12:08:27,083 [INFO]   valid_but_wrong_category        :  18 (33%)
+2026-07-27 12:08:27,083 [INFO]   entity_extraction_error         :   5 (9%)
+2026-07-27 12:08:27,083 [INFO]   valid_and_correct               :   3 (5%)
+2026-07-27 12:08:27,083 [INFO]   schema_serialisation_failure    :   1 (2%)
+2026-07-27 12:08:27,083 [INFO] 
+Placeholder-echo count check: 28/55 = 51% (paper/reviewer reference figure: 28/55 = 51%; confirm this still matches or note the discrepancy explicitly).
+2026-07-27 12:08:27,083 [WARNING] NOTE: 'entity_extraction_error' uses an automated proxy (empty name on an identity document, or a malformed/hallucinated customer_id) rather than full manual verification against source content, as the brief itself only requires a coarse taxonomy but flags this sub-category as needing 'eyeballing.' Spot-check this category's rows before treating counts as final.
+2026-07-27 12:08:27,084 [INFO] 
+======================================================================
+2026-07-27 12:08:27,084 [INFO] Robustness analyses complete. All outputs written to:
+2026-07-27 12:08:27,084 [INFO]   <repo>\evaluation\output
+2026-07-27 12:08:27,084 [INFO] Items NOT implemented (require explicit go-ahead first):
+2026-07-27 12:08:27,084 [INFO]   Item 4 - OCR field accuracy + audio WER (needs a ground-truth manifest)
+2026-07-27 12:08:27,085 [INFO]   Item 7 - Ollama seed pinning + public repository decisions
+2026-07-27 12:08:27,085 [INFO] ======================================================================
