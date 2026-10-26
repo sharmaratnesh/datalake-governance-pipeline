@@ -21,7 +21,7 @@ OUT_PATH = Path(__file__).parent / "research_paper" / "figures" / "ro1_methodolo
 FIG_W, FIG_H = 8.6, 13.0
 fig, ax = plt.subplots(figsize=(FIG_W, FIG_H))
 ax.set_xlim(0, 10)
-ax.set_ylim(0, 14.2)
+ax.set_ylim(-0.5, 14.2)
 ax.axis("off")
 
 INK       = "#1C2530"
@@ -201,40 +201,43 @@ y_bot = stage_box(
 y = y_bot - 0.28
 
 # ── Evaluation summary panel ───────────────────────────────────────────────────
-eval_h = 1.90
+eval_h = 2.35
 eval_box = FancyBboxPatch(
     (LEFT, y - eval_h), WIDTH, eval_h,
     boxstyle="round,pad=0,rounding_size=0.07",
     linewidth=1.0, edgecolor=BOX_LINE, facecolor="#FAFBFC", zorder=1,
 )
 ax.add_patch(eval_box)
-ax.text(5.0, y - 0.27, "Evaluation: 55-File Data Swamp vs Four-Expert Delphi Golden Labels",
+ax.text(5.0, y - 0.27, "Evaluation: 55-File Data Swamp and External Corpus vs Expert Golden Labels",
         fontsize=10.8, fontweight="bold", color=INK, ha="center", fontfamily=HEAD_FONT)
 
-ax.text(LEFT + 0.45, y - 0.62, "Four metrics", fontsize=8.6, fontweight="bold",
+ax.text(LEFT + 0.45, y - 0.62, "Metrics", fontsize=8.6, fontweight="bold",
         color=INK, fontfamily=BODY_FONT)
-metrics = ["Data-class category accuracy", "Security classification accuracy",
-           "Customer linkage accuracy", "Total processing time"]
+metrics = ["Information-type accuracy, per class", "Sensitivity accuracy and Cohen's kappa",
+           "Customer linkage accuracy",
+           "Entity and relation precision / recall", "Throughput, latency and break-even"]
 for i, m in enumerate(metrics):
-    ax.text(LEFT + 0.45, y - 0.88 - i * 0.215, m, fontsize=7.5, color=MUTED, fontfamily=BODY_FONT)
+    ax.text(LEFT + 0.45, y - 0.88 - i * 0.205, m, fontsize=7.5, color=MUTED, fontfamily=BODY_FONT)
 
 ax.text(LEFT + 5.05, y - 0.62, "Compared against", fontsize=8.6, fontweight="bold",
         color=INK, fontfamily=BODY_FONT)
 comps = ["3 blinded human participants (isolated)", "4-expert Delphi consensus baseline",
-         "Cohen's Kappa inter-method agreement"]
+         "Supervised baselines: logistic regression,", "   linear SVM, majority-class dummy",
+         "Text Anonymization Benchmark (1,268 docs)"]
 for i, c in enumerate(comps):
-    ax.text(LEFT + 5.05, y - 0.88 - i * 0.215, c, fontsize=7.5, color=MUTED, fontfamily=BODY_FONT)
+    ax.text(LEFT + 5.05, y - 0.88 - i * 0.205, c, fontsize=7.5, color=MUTED, fontfamily=BODY_FONT)
 
-ax.text(5.0, y - 1.62, "Fully local execution, no cloud API dependency",
+ax.text(5.0, y - 1.98, "All inference self-hosted \u2014 no external or third-party API at any stage",
         fontsize=8.3, color=ACCENTS[4], fontweight="bold", ha="center", style="italic",
         fontfamily=BODY_FONT)
-ax.text(5.0, y - 1.83,
-        "Pipelines: datalake_rule_based_pipeline.py  |  datalake_nlp_pipeline.py  |  "
-        "datalake_llm_pipeline.py  |  datalake_evaluate_all.py",
-        fontsize=6.4, color="#9AA1AC", ha="center", fontfamily=BODY_FONT)
+ax.text(5.0, y - 2.18,
+        "Robustness: five decoding conditions  |  1B\u20138B parameter scale probe  |  "
+        "inference-runtime and CPU/GPU comparison",
+        fontsize=6.9, color="#9AA1AC", ha="center", fontfamily=BODY_FONT)
 
 plt.tight_layout()
 OUT_PATH.parent.mkdir(parents=True, exist_ok=True)
-plt.savefig(OUT_PATH, dpi=220, bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_PATH, dpi=600, bbox_inches="tight", facecolor="white")
+plt.savefig(OUT_PATH.with_suffix(".pdf"), bbox_inches="tight", facecolor="white")   # vector copy
 plt.close()
-print(f"Saved -> {OUT_PATH}")
+print(f"Saved -> {OUT_PATH} and {OUT_PATH.with_suffix('.pdf')}")

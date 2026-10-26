@@ -74,7 +74,7 @@ def plot_accuracy_bars(df: pd.DataFrame, out_path: Path) -> None:
     ax.spines["right"].set_visible(False)
     ax.grid(axis="y", linestyle="--", alpha=0.3)
     plt.tight_layout()
-    plt.savefig(out_path, dpi=170, bbox_inches="tight")
+    plt.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close()
     print(f"Saved -> {out_path}")
 
@@ -104,7 +104,7 @@ def plot_time_vs_accuracy(df: pd.DataFrame, out_path: Path) -> None:
     ax.spines["right"].set_visible(False)
     ax.grid(True, which="both", linestyle="--", alpha=0.3)
     plt.tight_layout()
-    plt.savefig(out_path, dpi=170, bbox_inches="tight")
+    plt.savefig(out_path, dpi=600, bbox_inches="tight")
     plt.close()
     print(f"Saved -> {out_path}")
 

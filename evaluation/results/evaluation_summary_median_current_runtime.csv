@@ -1,0 +1,7 @@
+method,n_files,category_accuracy,security_accuracy,linkage_accuracy,overall_accuracy,time_seconds
+Human (avg),55,0.842,0.976,1.0,0.939,2100.0
+Expert Baseline,55,1.0,1.0,1.0,1.0,2220.0
+Rule-Based,55,0.764,0.509,0.236,0.503,36.293
+NLP,55,0.618,0.855,0.255,0.576,35.12200000000001
+LLM-llama3.2-1b,55,0.291,0.673,0.2,0.388,262.618
+LLM-phi3-mini,55,0.745,0.982,0.4,0.709,1247.074

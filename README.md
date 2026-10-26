@@ -77,7 +77,7 @@ Run IDs used below:
 | Sensitivity on the 45 non-audio vs 10 audio records | Z | `python score_nonaudio_subset.py --run july=output/metadata_llm_phi3_mini_20260723_135524.csv --run october=output/metadata_llm_phi3_mini_20261021_223725.csv --run p2_0.40.7=output/metadata_llm_phi3_mini_20261022_143804.csv --run v0321=output/metadata_llm_phi3_mini_20261022_220926.csv` | `nonaudio_subset_20261023_075854.csv` |
 | LLaMA unparseable output and `general` fallbacks, per run | Z | `python score_llama_fallbacks.py evaluation/results/variance_runs_20261022_141628.csv evaluation/results/variance_runs_20261022_214018.csv evaluation/results/variance_runs_20261022_220914.csv` | `llama_fallbacks_20261023_075855.csv` |
 | Run-to-run variance, regenerating the passes | C, O | `python run_variance_passes.py` (about 3 h on the laptop below) | `variance_runs_*.csv`, `ollama_models_20261022.txt`, `ollama_runtime_test_20261022.txt` |
-| Figures 2–3 | — | `python generate_comparison_figures.py evaluation/results/evaluation_summary_20260723_155341.csv` | written to `research_paper/figures/` |
+| Figures 2–3 (current runtime: median passes, as in Table 1) | — | `python generate_comparison_figures.py evaluation/results/evaluation_summary_median_current_runtime.csv` | written to `research_paper/figures/`; input assembled from three runs, see `evaluation/results/README.md`. `evaluation_summary_20260723_155341.csv` is kept only as the superseded-runtime record and no longer drives any figure |
 | Figure 1 | — | `python generate_ro1_methodology_figure.py` | written to `research_paper/figures/` |
 
 **Notes on the map:**
