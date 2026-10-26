@@ -1,0 +1,5 @@
+participant,n_labelled_non_confidential,precision,recall,f1
+P1,4.0,1.0,0.667,0.8
+P2,6.0,1.0,1.0,1.0
+P3,4.0,1.0,0.667,0.8
+mean,4.7,1.0,0.778,0.867

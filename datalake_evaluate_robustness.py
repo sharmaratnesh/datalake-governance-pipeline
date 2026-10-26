@@ -194,12 +194,15 @@ def human_majority_correct(df: pd.DataFrame, task: str) -> pd.Series:
     distinct, explicitly-labelled definition from the headline Human Average.
     """
     gold_col = f"golden_{task}"
-    # The published per-file CSV carries only the majority label (scripts/aggregate_per_file.py);
-    # the per-participant columns exist only in the private working copy.
+    # The published per-file CSV carries the majority label for category and linkage only
+    # (scripts/aggregate_per_file.py); the per-participant columns exist only in the private
+    # working copy. Returns None when neither is available (security, from public data).
     if f"human_majority_{task}" in df.columns:
         return df[f"human_majority_{task}"].astype(str) == df[gold_col].astype(str)
     participants = sorted(c[: -len(f"_{task}")] for c in df.columns
                           if c.startswith("participant_") and c.endswith(f"_{task}"))
+    if not participants:
+        return None
     votes = df[[f"{p}_{task}" for p in participants]].apply(
         lambda row: Counter(row).most_common(1)[0][0], axis=1
     )
@@ -227,12 +230,13 @@ def run_wilson_ci(df: pd.DataFrame, logger: logging.Logger) -> pd.DataFrame:
             "security": df[f"{m}_sec_ok"],
             "overall":  df[f"{m}_cat_ok"] & df[f"{m}_sec_ok"],
         }
-    method_bool_cols["Human (avg, majority vote)"] = {
-        "category": human_majority_correct(df, "category"),
-        "security": human_majority_correct(df, "security"),
-    }
-    hc = method_bool_cols["Human (avg, majority vote)"]
-    hc["overall"] = hc["category"] & hc["security"]
+    hc = {t: s for t in ("category", "security") if (s := human_majority_correct(df, t)) is not None}
+    if len(hc) == 2:
+        hc["overall"] = hc["category"] & hc["security"]
+    elif "security" not in hc:
+        logger.info("Human security/overall rows skipped: no per-record security majority in this input "
+                    "(not published; see evaluation/results/README.md).")
+    method_bool_cols["Human (avg, majority vote)"] = hc
 
     logger.info(f"{'Method':<28} {'Metric':<10} {'Correct/N':>10} {'Acc':>7} {'95% CI':>18}")
     logger.info("-" * 78)
@@ -334,12 +338,14 @@ def run_phase_split(df: pd.DataFrame, logger: logging.Logger) -> pd.DataFrame:
     for phase_label, mask in (("Phase 1", is_phase1), ("Phase 2", ~is_phase1)):
         sub = df[mask]
         h_cat = human_majority_correct(sub, "category").mean()
-        h_sec = human_majority_correct(sub, "security").mean()
+        h_sec_ok = human_majority_correct(sub, "security")
+        h_sec = None if h_sec_ok is None else h_sec_ok.mean()
         logger.info(f"{'Human (avg, maj.vote)':<20} {phase_label:<8} {len(sub):>4} "
-                    f"{h_cat:>10.3f} {h_sec:>10.3f} {'n/a':>10}")
+                    f"{h_cat:>10.3f} {'n/a' if h_sec is None else f'{h_sec:.3f}':>10} {'n/a':>10}")
         rows.append({
             "method": "Human (avg, majority vote)", "phase": phase_label, "n": len(sub),
-            "category_accuracy": round(h_cat, 4), "security_accuracy": round(h_sec, 4),
+            "category_accuracy": round(h_cat, 4),
+            "security_accuracy": None if h_sec is None else round(h_sec, 4),
             "linkage_accuracy": None,
         })
         rows.append({

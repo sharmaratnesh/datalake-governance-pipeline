@@ -55,7 +55,8 @@ Run IDs used below:
 
 | Paper item | Needs | Command | Published result in `evaluation/results/` |
 |---|---|---|---|
-| Table 1 and Table 3, current runtime (median passes Phi-3 p2, LLaMA p3: accuracy, Wilson CIs, sensitivity κ, minority-class P/R/F1, 5-pass ranges) | Z | Summary: assembled from three runs, see `evaluation/results/README.md` (each LLM row is `python datalake_evaluate_all.py --methods phi3 --phi3 output/metadata_llm_phi3_mini_20261022_143804.csv`, likewise `--methods llama --llama output/metadata_llm_llama32_1b_20261022_164754.csv`). CIs: the current-runtime Table 4 row below. κ, minority-class P/R/F1 and ranges: the run-to-run variance row below | `evaluation_summary_median_current_runtime.csv`, `evaluation_confidence_intervals_20261026_221836_median_current_runtime.csv`, `variance_primary_20261022_223848.csv`, `primary_distribution_20261022_223948.csv` |
+| Table 1 and Table 3, current runtime (median passes Phi-3 p2, LLaMA p3: accuracy, Wilson CIs, sensitivity κ, minority-class P/R/F1, 5-pass ranges); Supplementary Table S6 (pairwise κ) | Z | `python datalake_evaluate_all.py --rule-based output/metadata_rule_based_20261021_222646.csv --nlp output/metadata_nlp_20261021_222739.csv --llama output/metadata_llm_llama32_1b_20261022_164754.csv --phi3 output/metadata_llm_phi3_mini_20261022_143804.csv` (October Rule-Based/NLP runs with the two median passes; in a fresh clone the Human (avg) row is absent, see Table 3's human row below). CIs: the current-runtime Table 4 row below. 5-pass ranges: the run-to-run variance row below | `evaluation_summary_median_current_runtime.csv`, `evaluation_kappa_20261026_223258_median_current_runtime.csv` (S6), `evaluation_security_prf_20261026_223258_median_current_runtime.csv`, `evaluation_confidence_intervals_20261026_221836_median_current_runtime.csv`, `variance_primary_20261022_223848.csv`, `primary_distribution_20261022_223948.csv` |
+| Table 3, human row (mean of the three annotators on the non-confidential class) | withheld sheets | `python scripts/human_minority_class.py` (runs only where the annotator sheets exist; published as aggregates) | `human_minority_class_20261027.csv` |
 | Tables 1–3 (accuracy, κ, per-class P/R/F1), July run (superseded runtime) | Z | `python datalake_evaluate_all.py --rule-based output/metadata_rule_based_20260723_134440.csv --nlp output/metadata_nlp_20260723_134532.csv --llama output/metadata_llm_llama32_1b_20260723_134633_FROM_DB.csv --phi3 output/metadata_llm_phi3_mini_20260723_135524.csv` | `evaluation_{summary,kappa,category_prf,security_prf,per_file,human_detail}_20260723_155341.csv` |
 | Tables 1–3, October reference run (current runtime, single pass; source of the Rule-Based, TF-IDF, human and expert rows) | Z | same command with the October run IDs | `evaluation_*_20261021_225854.csv` |
 | Table 4 (phase split), file-type split, McNemar test and Wilson CIs, current runtime (median passes) | Z | `python datalake_evaluate_robustness.py --per-file evaluation/results/evaluation_per_file_median_current_runtime.csv --label median_current_runtime --no-taxonomy`. The per-file input merges the October per-file table with the p2 and p3 per-file tables: `python scripts/merge_per_file.py evaluation/results/evaluation_per_file_20261021_225854.csv <out.csv> --method llm_phi3_mini=<p2 per-file> --method llm_llama3.2_1b=<p3 per-file>`, where the per-file tables come from the two `--methods` commands in the Table 1 row | `evaluation_{phase_split,modality_split,mcnemar_security,confidence_intervals}_20261026_221836_median_current_runtime.csv`, `evaluation_per_file_median_current_runtime.csv` |
@@ -69,6 +70,7 @@ Run IDs used below:
 | Table 6 (SPARQL competency queries), July run | Z | `python datalake_query_knowledge_graph.py --run-ts 20260723_135524 --results-csv cq_july.csv` | `competency_queries_20261022_214213_july_paper.csv` |
 | Table 6, current runtime (median-κ pass p2) | Z | `python datalake_query_knowledge_graph.py --run-ts 20261022_143804 --results-csv cq_p2.csv` | `competency_queries_20261022_214213_p2.csv` |
 | Table 7 (supervised baselines) | C, T, Z | `python datalake_classical_baselines.py` | `classical_baselines_20261021_233857.csv` |
+| Table 7, zero-shot rows (not in `classical_baselines_*.csv`) | Z | read from existing files | **Keyword rules, information type:** accuracy `evaluation_summary_median_current_runtime.csv`, CI `evaluation_confidence_intervals_20261026_221836_median_current_runtime.csv`, macro F1 `evaluation_category_prf_20261021_225854.csv` (macro avg), κ `evaluation_kappa_20261021_225854.csv`. **Phi-3 Mini sensitivity, current runtime (p2):** accuracy `evaluation_summary_median_current_runtime.csv`, CI `evaluation_confidence_intervals_20261026_221836_median_current_runtime.csv`, macro F1 `evaluation_security_prf_20261026_223258_median_current_runtime.csv`, κ `evaluation_kappa_20261026_223258_median_current_runtime.csv`. **Phi-3 Mini sensitivity, superseded runtime:** accuracy `evaluation_summary_20260723_155341.csv`, CI `evaluation_confidence_intervals_20260727_120827.csv`, macro F1 `evaluation_security_prf_20260723_155341.csv`, κ `evaluation_kappa_20260723_155341.csv` |
 | Table 8 (TAB external validation) | T, Z | `python external/tab_agreement.py && python datalake_tab_evaluate.py --csv rule_based=output/metadata_rule_based_20261021_235159.csv --csv nlp=output/metadata_nlp_20261021_235257.csv` | `tab_evaluation_20261022_113611.csv`, `external/tab_agreement.json` |
 | Table 9 (decoding ablations), scoring | T, Z | `python score_cluster_ablations.py` | `decoding_ablations_20261022_061538.csv` |
 | Table 9, re-running the ablations | G, T | `cluster/run_ablations_pbs.sh` (edit the site placeholders first) | — |
@@ -81,6 +83,8 @@ Run IDs used below:
 | Run-to-run variance, regenerating the passes | C, O | `python run_variance_passes.py` (about 3 h on the laptop below) | `variance_runs_*.csv`, `ollama_models_20261022.txt`, `ollama_runtime_test_20261022.txt` |
 | Figures 2–3 (current runtime: median passes, as in Table 1) | — | `python generate_comparison_figures.py evaluation/results/evaluation_summary_median_current_runtime.csv` | written to `research_paper/figures/`; input assembled from three runs, see `evaluation/results/README.md`. `evaluation_summary_20260723_155341.csv` is kept only as the superseded-runtime record and no longer drives any figure |
 | Figure 1 | — | `python generate_ro1_methodology_figure.py` | written to `research_paper/figures/` |
+| Supplementary Table S7 (example Phi-3 rationales, pass p2) | Z | `sqlite3 output/datalake_llm_phi3_mini_20261022_143804.db "SELECT file_name, info_type, security_class, customer_id, llm_reason FROM data_files"` | the DB itself (Zenodo `databases.zip`); `customer_id` is the extracted entity |
+| Supplementary Table S8 (file-type split, current runtime) | Z | the current-runtime Table 4 row above | `evaluation_modality_split_20261026_221836_median_current_runtime.csv` |
 
 **Notes on the map:**
 - **`output/` and `evaluation/output/`:** the fetch scripts place inputs in `output/`.
@@ -111,18 +115,29 @@ collected under ethics approval ETH25-11255, and are withheld. What is published
 
 - **`evaluation_human_detail_*.csv`:** per-participant aggregate scores (accuracy per task
   and time, as pseudonymous P1–P3).
-- **`evaluation_per_file_*.csv`:** the three-annotator **majority label** per record, and
-  whether it matches the golden label (`human_majority_*`). The 18 per-annotator columns
-  were removed by `scripts/aggregate_per_file.py`.
+- **`human_minority_class_20261027.csv`:** per-participant scores on the minority
+  (non-confidential) sensitivity class: records labelled non-confidential, precision,
+  recall, F1. The mean row is Table 3's human row.
+- **`evaluation_per_file_*.csv`:** the three-annotator **majority label** per record for
+  information type and linkage, and whether it matches the golden label
+  (`human_majority_*`). The 18 per-annotator columns were removed by
+  `scripts/aggregate_per_file.py`.
 
-**These are sufficient to verify every human-agreement figure in the paper:**
-- The aggregate scores give Table 1's human rows.
-- The majority columns drive the human arm of Table 4's confidence intervals and McNemar
-  tests. `datalake_evaluate_robustness.py` reads them directly, and running it on the
-  published per-file CSV reproduces Table 4 exactly.
+**Two per-record summaries are deliberately not published:**
+- **A count of annotators correct.** A unanimous count reveals each annotator's answer
+  for that record.
+- **The majority label for sensitivity.** Combined with the per-participant accuracies,
+  it would identify which records each annotator got wrong.
 
-A per-record count of how many annotators were correct is deliberately not published. A
-unanimous count would reveal each annotator's individual answer for that record.
+**What can be recomputed from public data:**
+- **Human aggregates:** every per-participant figure, from the aggregate files above.
+- **Human majority vote for information type:** recomputed by
+  `datalake_evaluate_robustness.py` from the per-file CSVs.
+- **Human majority vote for sensitivity** (the human sensitivity rows of the confidence
+  intervals and phase split): computed from the withheld sheets and published only as
+  results, in the committed `evaluation_confidence_intervals_*` and
+  `evaluation_phase_split_*` files. Re-running the script on the public per-file CSVs
+  leaves those rows blank.
 
 ---
 
