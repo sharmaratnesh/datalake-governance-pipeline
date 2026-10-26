@@ -1,0 +1,13 @@
+method,phase,n,category_accuracy,security_accuracy,linkage_accuracy
+Rule-Based,Phase 1,7,0.8571,0.5714,0.4286
+Rule-Based,Phase 2,48,0.75,0.5,0.2083
+NLP,Phase 1,7,0.8571,0.8571,0.5714
+NLP,Phase 2,48,0.5833,0.8542,0.2083
+LLM-LLaMA3.2:1b,Phase 1,7,0.4286,0.8571,0.1429
+LLM-LLaMA3.2:1b,Phase 2,48,0.2708,0.6458,0.2083
+LLM-Phi3:mini,Phase 1,7,1.0,1.0,0.1429
+LLM-Phi3:mini,Phase 2,48,0.7083,0.9792,0.4375
+"Human (avg, majority vote)",Phase 1,7,1.0,1.0,
+Expert Baseline,Phase 1,7,1.0,1.0,1.0
+"Human (avg, majority vote)",Phase 2,48,0.7917,0.9583,
+Expert Baseline,Phase 2,48,1.0,1.0,1.0

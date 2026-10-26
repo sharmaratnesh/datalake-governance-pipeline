@@ -1,7 +1,7 @@
 """
 datalake_evaluate_robustness.py — Reviewer-requested robustness analyses (RO1)
 
-Implements items 1, 2, 3, 5, and 6 from CLAUDE_CODE_REVIEWER_TASKS.md:
+Implements the reviewers' items 1, 2, 3, 5 and 6:
   1. Wilson 95% CI on headline accuracies (category/security/overall), one paired
      McNemar test on the security decision between the two best automated methods.
   2. Phase 1 (7 manually authored files) vs Phase 2 (48 programmatically generated
@@ -615,15 +615,20 @@ def main() -> None:
     ap = argparse.ArgumentParser(description="RO1 robustness analyses")
     ap.add_argument("--per-file", help="evaluation/output/evaluation_per_file_<ts>.csv")
     ap.add_argument("--llama-log", help="output/log_llm_llama32_1b_<ts>.txt")
+    ap.add_argument("--label", default="", help="suffix for output names, e.g. median_current_runtime")
+    ap.add_argument("--no-taxonomy", action="store_true",
+                    help="skip the LLaMA failure taxonomy (it then needs no --llama-log)")
     args = ap.parse_args()
     per_file_path = required(select_artefact(EVAL_OUT, "evaluation_per_file_*.csv", explicit=args.per_file,
                                              accept=row_count_check(55), what="per-file CSV",
                                              option="--per-file"), "evaluation_per_file_*.csv")
-    llama_log = required(select_artefact(OUTPUT_DIR, "log_llm_llama32_1b_*.txt", explicit=args.llama_log,
-                                         accept=primary_corpus_log, what="LLaMA log",
-                                         option="--llama-log"), "log_llm_llama32_1b_*.txt")
+    llama_log = None if args.no_taxonomy else required(
+        select_artefact(OUTPUT_DIR, "log_llm_llama32_1b_*.txt", explicit=args.llama_log,
+                        accept=primary_corpus_log, what="LLaMA log", option="--llama-log"),
+        "log_llm_llama32_1b_*.txt")
+    stem = f"{TIMESTAMP}_{args.label}" if args.label else TIMESTAMP
     EVAL_OUT.mkdir(parents=True, exist_ok=True)
-    log_path = EVAL_OUT / f"log_evaluate_robustness_{TIMESTAMP}.txt"
+    log_path = EVAL_OUT / f"log_evaluate_robustness_{stem}.txt"
     logger = setup_logging(log_path)
 
     logger.info("=" * 70)
@@ -636,22 +641,23 @@ def main() -> None:
     logger.info(f"Rows loaded: {len(df)} (expected 55)")
 
     ci_df = run_wilson_ci(df, logger)
-    ci_df.to_csv(EVAL_OUT / f"evaluation_confidence_intervals_{TIMESTAMP}.csv", index=False)
+    ci_df.to_csv(EVAL_OUT / f"evaluation_confidence_intervals_{stem}.csv", index=False)
 
     mcnemar_df = run_mcnemar(df, logger)
-    mcnemar_df.to_csv(EVAL_OUT / f"evaluation_mcnemar_security_{TIMESTAMP}.csv", index=False)
+    mcnemar_df.to_csv(EVAL_OUT / f"evaluation_mcnemar_security_{stem}.csv", index=False)
 
     phase_df = run_phase_split(df, logger)
-    phase_df.to_csv(EVAL_OUT / f"evaluation_phase_split_{TIMESTAMP}.csv", index=False)
+    phase_df.to_csv(EVAL_OUT / f"evaluation_phase_split_{stem}.csv", index=False)
 
     modality_df = run_modality_split(df, logger)
-    modality_df.to_csv(EVAL_OUT / f"evaluation_modality_split_{TIMESTAMP}.csv", index=False)
+    modality_df.to_csv(EVAL_OUT / f"evaluation_modality_split_{stem}.csv", index=False)
 
     gen_gold_df = run_generator_vs_golden(df, logger)
-    gen_gold_df.to_csv(EVAL_OUT / f"evaluation_generator_vs_golden_{TIMESTAMP}.csv", index=False)
+    gen_gold_df.to_csv(EVAL_OUT / f"evaluation_generator_vs_golden_{stem}.csv", index=False)
 
-    taxonomy_df = run_failure_taxonomy(df, logger, llama_log)
-    taxonomy_df.to_csv(EVAL_OUT / f"evaluation_llama1b_failure_taxonomy_{TIMESTAMP}.csv", index=False)
+    if llama_log is not None:
+        taxonomy_df = run_failure_taxonomy(df, logger, llama_log)
+        taxonomy_df.to_csv(EVAL_OUT / f"evaluation_llama1b_failure_taxonomy_{stem}.csv", index=False)
 
     logger.info("\n" + "=" * 70)
     logger.info("Robustness analyses complete. All outputs written to:")

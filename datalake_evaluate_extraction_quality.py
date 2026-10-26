@@ -2,7 +2,7 @@
 datalake_evaluate_extraction_quality.py — Reviewer-requested item 4: extraction quality
 
 Separates extraction error (OCR / Whisper) from downstream classification error, per
-CLAUDE_CODE_REVIEWER_TASKS.md item 4. Reads two ground-truth manifests that must be
+the reviewers' item 4. Reads two ground-truth manifests that must be
 filled in by hand first (see the templates already created):
 
   evaluation/data_swamp_ocr_ground_truth.csv

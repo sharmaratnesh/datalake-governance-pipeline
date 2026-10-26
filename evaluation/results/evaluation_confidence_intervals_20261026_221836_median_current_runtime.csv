@@ -1,0 +1,16 @@
+method,metric,correct,n,accuracy,ci_low,ci_high
+Rule-Based,category,42,55,0.7636,0.6365,0.8563
+Rule-Based,security,28,55,0.5091,0.3808,0.6362
+Rule-Based,overall,21,55,0.3818,0.2652,0.5139
+NLP,category,34,55,0.6182,0.4861,0.7348
+NLP,security,47,55,0.8545,0.7384,0.9244
+NLP,overall,30,55,0.5455,0.4152,0.6697
+LLM-LLaMA3.2:1b,category,16,55,0.2909,0.1877,0.4214
+LLM-LLaMA3.2:1b,security,37,55,0.6727,0.541,0.7819
+LLM-LLaMA3.2:1b,overall,15,55,0.2727,0.1728,0.4023
+LLM-Phi3:mini,category,41,55,0.7455,0.617,0.8419
+LLM-Phi3:mini,security,54,55,0.9818,0.9039,0.9968
+LLM-Phi3:mini,overall,40,55,0.7273,0.5977,0.8272
+"Human (avg, majority vote)",category,45,55,0.8182,0.6967,0.8981
+"Human (avg, majority vote)",security,53,55,0.9636,0.8768,0.99
+"Human (avg, majority vote)",overall,44,55,0.8,0.6764,0.8845

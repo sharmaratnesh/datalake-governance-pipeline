@@ -1,0 +1,2 @@
+method_a,method_b,both_correct,a_only,b_only,both_wrong,statistic,p_value,test_type
+LLM-Phi3:mini,NLP,47,7,0,1,0.0,0.0156,mcnemar_exact
