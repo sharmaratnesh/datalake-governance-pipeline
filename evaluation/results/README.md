@@ -22,7 +22,7 @@ It is reproduced exactly by one run pinned to those four prediction files:
 The same run writes `evaluation_kappa_20261026_223258_median_current_runtime.csv`
 (Supplementary Table S6) and
 `evaluation_security_prf_20261026_223258_median_current_runtime.csv` (minority-class P/R/F1,
-Table 7's current Phi-3 macro F1). Without the withheld annotator sheets, i.e. in a fresh
+Table 2's current Phi-3 macro F1). Without the withheld annotator sheets, i.e. in a fresh
 clone, the Human (avg) rows are absent from its output.
 
 `evaluation_summary_20260723_155341.csv` is the July 2026 summary from the superseded
@@ -42,7 +42,7 @@ not published).
 Produced from it by
 `python datalake_evaluate_robustness.py --per-file evaluation/results/evaluation_per_file_median_current_runtime.csv --label median_current_runtime --no-taxonomy`:
 
-- `evaluation_phase_split_20261026_221836_median_current_runtime.csv`: Table 4.
+- `evaluation_phase_split_20261026_221836_median_current_runtime.csv`: Table 5.
 - `evaluation_modality_split_20261026_221836_median_current_runtime.csv`: file-type split.
 - `evaluation_mcnemar_security_20261026_221836_median_current_runtime.csv`: exact McNemar on
   sensitivity correctness between the two strongest sensitivity methods (Phi-3 p2 and TF-IDF).
@@ -58,7 +58,7 @@ superseded-runtime (July) versions.
 ## `human_minority_class_20261027.csv`
 
 Per-participant scores on the minority (non-confidential) sensitivity class: records labelled
-non-confidential, precision, recall and F1 for P1–P3, and their mean (Table 3's human row).
+non-confidential, precision, recall and F1 for P1–P3, and their mean (Table 4's human row).
 Computed by `scripts/human_minority_class.py` from the withheld annotator sheets and
 published as aggregates only. Like the per-participant accuracies, they say how many
 non-confidential records each annotator found, not which.

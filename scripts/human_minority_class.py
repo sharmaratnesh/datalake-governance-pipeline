@@ -4,7 +4,7 @@ Per-participant scores on the minority sensitivity class (non-confidential, "gen
 For each annotator: how many records they labelled non-confidential, and their precision,
 recall and F1 on that class against the golden labels. These are published as aggregates
 (pseudonymous P1-P3), like the per-participant accuracies in evaluation_human_detail_*.csv;
-the per-record answers they are computed from are not published. The mean row is Table 3's
+the per-record answers they are computed from are not published. The mean row is Table 4's
 human row.
 
 Needs the withheld annotator sheets (evaluation/participant-*.xlsx), so it can only be run

@@ -1,6 +1,6 @@
 """Populate the generated OWL ontology with individuals from the pipeline's SQLite
 store, then run SPARQL competency queries against it. Demonstrates that the
-generated artefacts support governance queries (Table 6: queryable knowledge graph).
+generated artefacts support governance queries (Table 7: queryable knowledge graph).
 
 The DB/OWL pair is selected explicitly (datalake_artefacts.py): it is auto-selected only
 if exactly one Phi-3 Mini run over the 55-file data_swamp/ exists; otherwise pass
